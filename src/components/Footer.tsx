@@ -18,14 +18,14 @@ export default function Footer() {
     */
     <footer
       className="w-full relative overflow-hidden"
-      style={{ background: "#01050A", minHeight: "680px" }}
+      style={{ background: "#010E13", minHeight: "680px" }}
     >
       {/* Top blend — merges seamlessly with the section above */}
       <div
         className="absolute top-0 inset-x-0 h-48 pointer-events-none"
         style={{
           zIndex: 6,
-          background: "linear-gradient(to bottom, #010814 0%, transparent 100%)"
+          background: "linear-gradient(to bottom, #010E13 0%, transparent 100%)"
         }}
       />
 
@@ -89,7 +89,7 @@ export default function Footer() {
         style={{
           zIndex: 2,
           background:
-            "linear-gradient(to right, #01050A 5%, transparent 28%, transparent 72%, #01050A 95%)"
+            "linear-gradient(to right, #010E13 5%, transparent 28%, transparent 72%, #010E13 95%)"
         }}
       />
 
@@ -108,7 +108,7 @@ export default function Footer() {
         {/* Subtle bottom fade */}
         <div
           className="absolute inset-x-0 bottom-0 h-12"
-          style={{ background: "linear-gradient(to top, #01050A, transparent)" }}
+          style={{ background: "linear-gradient(to top, #010E13, transparent)" }}
         />
       </div>
 
@@ -117,7 +117,7 @@ export default function Footer() {
         className="block md:hidden absolute inset-0 pointer-events-none"
         style={{
           zIndex: 4,
-          background: "radial-gradient(circle at bottom, rgba(1, 5, 10, 0.95) 0%, rgba(1, 5, 10, 0.8) 45%, rgba(1, 5, 10, 0.3) 70%, transparent 100%)"
+          background: "radial-gradient(circle at bottom, rgba(1, 14, 19, 0.95) 0%, rgba(1, 14, 19, 0.8) 45%, rgba(1, 14, 19, 0.3) 70%, transparent 100%)"
         }}
       />
 

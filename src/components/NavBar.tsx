@@ -85,7 +85,7 @@ export default function NavBar() {
           className="flex items-center justify-between rounded-full px-4 sm:px-6 py-3 transition-all duration-500 relative z-50"
           style={{
             background: scrolled || mobileMenuOpen
-              ? "rgba(1, 8, 20, 0.35)"
+              ? "rgba(1, 14, 19, 0.35)"
               : "rgba(255, 255, 255, 0.04)",
             backdropFilter: "blur(28px) saturate(1.8) brightness(1.15)",
             WebkitBackdropFilter: "blur(28px) saturate(1.8) brightness(1.15)",
@@ -202,7 +202,7 @@ export default function NavBar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute top-full left-4 right-4 mt-2 p-4 rounded-3xl bg-[#010814]/40 backdrop-blur-2xl border border-white/10 shadow-2xl lg:hidden z-40"
+              className="absolute top-full left-4 right-4 mt-2 p-4 rounded-3xl bg-[#010E13]/40 backdrop-blur-2xl border border-white/10 shadow-2xl lg:hidden z-40"
             >
               <nav className="flex flex-col gap-2">
                 {navLinks.map((item) => {

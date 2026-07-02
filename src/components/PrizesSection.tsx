@@ -37,7 +37,7 @@ const prizes = [
   {
     rank: "3rd",
     label: "Second Runners-Up",
-    amount: "LKR 125,000",
+    amount: "LKR 75,000",
     tagline: "Cash Prize",
     accent: "#CD8B4A",
     glow: "rgba(205,139,74,0.14)",
@@ -61,7 +61,7 @@ export default function PrizesSection() {
   }, []);
 
   return (
-    <section id="rewards" ref={sectionRef} className="relative w-full bg-[#010814] pt-10 pb-10 md:py-20 overflow-hidden z-10">
+    <section id="rewards" ref={sectionRef} className="relative w-full bg-[#010E13] pt-10 pb-10 md:py-20 overflow-hidden z-10">
 
       {/* Ambient deep glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -108,8 +108,8 @@ export default function PrizesSection() {
                   className="relative overflow-hidden rounded-3xl h-full flex flex-col justify-between p-6 md:p-8 flex-1 group-hover:scale-[1.02]"
                   style={{
                     background: isMobile 
-                      ? "linear-gradient(145deg, #051833 0%, #010a17 100%)" 
-                      : "linear-gradient(145deg, #031126 0%, #010610 100%)",
+                      ? "linear-gradient(145deg, #052E3F 0%, #010E13 100%)" 
+                      : "linear-gradient(145deg, #052E3F 0%, #010E13 100%)",
                     backdropFilter: "blur(32px) saturate(1.6)",
                     WebkitBackdropFilter: "blur(32px) saturate(1.6)",
                     border: isMobile
@@ -244,7 +244,7 @@ export default function PrizesSection() {
       {/* Seamless blend */}
       <div
         className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, transparent, #010814)" }}
+        style={{ background: "linear-gradient(to bottom, transparent, #010E13)" }}
       />
     </section>
   );

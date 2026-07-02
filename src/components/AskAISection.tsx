@@ -222,7 +222,7 @@ export default function AskAISection() {
   };
 
   return (
-    <section id="ask-ai" className="relative w-full bg-[#010814] py-16 md:py-20 overflow-hidden z-10">
+    <section id="ask-ai" className="relative w-full bg-[#010E13] py-16 md:py-20 overflow-hidden z-10">
       {/* Background Orbs — radial-gradients instead of blur() filters so the
           continuous motion stays GPU-composited (no per-frame blur repaint). */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -265,7 +265,7 @@ export default function AskAISection() {
         >
           <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-white/20 via-white/5 to-transparent opacity-50" />
           
-          <div className="relative rounded-[23px] bg-[#010814]/80 backdrop-blur-3xl overflow-hidden border border-white/10 shadow-2xl flex flex-col h-[560px] md:h-[660px]">
+          <div className="relative rounded-[23px] bg-[#010E13]/80 backdrop-blur-3xl overflow-hidden border border-white/10 shadow-2xl flex flex-col h-[560px] md:h-[660px]">
             
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/[0.02]">
@@ -351,7 +351,7 @@ export default function AskAISection() {
 
             {/* Input Area */}
             <form onSubmit={handleSubmit} className="p-4 bg-white/[0.02] border-t border-white/5">
-              <div className="relative flex items-center bg-black/40 border border-white/10 rounded-full px-4 py-2 focus-within:border-[#72E5F8]/50 focus-within:bg-[#041A3A]/40 transition-colors">
+              <div className="relative flex items-center bg-black/40 border border-white/10 rounded-full px-4 py-2 focus-within:border-[#72E5F8]/50 focus-within:bg-[#052E3F]/40 transition-colors">
                 <input 
                   type="text" 
                   value={inputValue}

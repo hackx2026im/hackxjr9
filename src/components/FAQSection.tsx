@@ -53,7 +53,7 @@ export default function FAQSection() {
   const [activeIdx, setActiveIdx] = useState<number | null>(0); // Initialize first as open to show the connection effect
 
   return (
-    <section id="faq" className="relative w-full bg-[#010814] pt-10 pb-12 md:py-20 overflow-hidden z-10">
+    <section id="faq" className="relative w-full bg-[#010E13] pt-10 pb-12 md:py-20 overflow-hidden z-10">
       {/* Background Ambient */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#72E5F8]/5 rounded-full blur-[150px]" />
@@ -138,7 +138,7 @@ export default function FAQSection() {
                     transition={{ duration: 0.6, delay: 0.8 + (idx * 0.15) }}
                   >
                     <div 
-                      className={`relative overflow-hidden rounded-2xl border transition-all duration-500 cursor-pointer backdrop-blur-md z-10 ${isActive ? 'bg-[#041A3A]/60 border-[#72E5F8]/40 shadow-[0_0_30px_rgba(114,229,248,0.1)]' : 'bg-white/[0.02] border-white/5 hover:bg-white/[0.05]'}`}
+                      className={`relative overflow-hidden rounded-2xl border transition-all duration-500 cursor-pointer backdrop-blur-md z-10 ${isActive ? 'bg-[#052E3F]/60 border-[#72E5F8]/40 shadow-[0_0_30px_rgba(114,229,248,0.1)]' : 'bg-white/[0.02] border-white/5 hover:bg-white/[0.05]'}`}
                       onClick={() => setActiveIdx(isActive ? null : idx)}
                     >
                       <div className="p-6 flex justify-between items-center relative">
@@ -151,7 +151,7 @@ export default function FAQSection() {
                       </h3>
                     </div>
                     
-                    <div className={`shrink-0 flex items-center justify-center w-10 h-10 rounded-full transition-all duration-500 ${isActive ? 'bg-[#72E5F8] text-[#010814] rotate-180 shadow-[0_0_15px_rgba(114,229,248,0.5)]' : 'bg-white/5 text-white/50'}`}>
+                    <div className={`shrink-0 flex items-center justify-center w-10 h-10 rounded-full transition-all duration-500 ${isActive ? 'bg-[#72E5F8] text-[#010E13] rotate-180 shadow-[0_0_15px_rgba(114,229,248,0.5)]' : 'bg-white/5 text-white/50'}`}>
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
@@ -230,7 +230,7 @@ export default function FAQSection() {
                   transition={{ duration: 0.5, delay: 0.3 + (idx * 0.1) }}
                 >
                   <div 
-                    className={`relative p-5 rounded-2xl border transition-colors duration-300 overflow-hidden ${isActive ? 'bg-[#041A3A]/40 border-[#72E5F8]/30' : 'bg-white/[0.02] border-white/5'}`}
+                    className={`relative p-5 rounded-2xl border transition-colors duration-300 overflow-hidden ${isActive ? 'bg-[#052E3F]/40 border-[#72E5F8]/30' : 'bg-white/[0.02] border-white/5'}`}
                     onClick={() => setActiveIdx(isActive ? null : idx)}
                   >
                     <div className="flex justify-between items-start gap-4 cursor-pointer">
@@ -242,7 +242,7 @@ export default function FAQSection() {
                         {faq.title}
                       </h3>
                     </div>
-                    <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 mt-1 ${isActive ? 'bg-[#72E5F8] text-[#010814] rotate-180' : 'bg-white/5 text-white/50'}`}>
+                    <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 mt-1 ${isActive ? 'bg-[#72E5F8] text-[#010E13] rotate-180' : 'bg-white/5 text-white/50'}`}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>

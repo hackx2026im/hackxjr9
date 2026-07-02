@@ -69,8 +69,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-black: #010814;
-  --color-brand-dark-blue: #041A3A;
+  --color-brand-black: #010E13;
+  --color-brand-dark-blue: #052E3F;
   --color-brand-navy: #0A5C72;
   --color-brand-royal: #18A0C0;
   --color-brand-sky: #72E5F8;
@@ -79,7 +79,7 @@
 }
 
 :root {
-  --background: #010814;
+  --background: #010E13;
   --foreground: #ffffff;
 }
 
@@ -124,7 +124,7 @@
   }
 
   body {
-    background: #010814;
+    background: #010E13;
     color: #ffffff;
     font-family: 'TT Hoves Pro', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -203,7 +203,7 @@
    ============================================= */
 
 .glass-card {
-  background: rgba(4, 26, 58, 0.45);
+  background: rgba(5, 46, 63, 0.45);
   backdrop-filter: blur(20px) saturate(1.8);
   -webkit-backdrop-filter: blur(20px) saturate(1.8);
   border: 1px solid rgba(114, 229, 248, 0.12);
@@ -305,7 +305,7 @@
   border-radius: 9999px;
   overflow: hidden;
   isolation: isolate;
-  background: radial-gradient(circle at 50% 50%, #0A5C72, #041A3A);
+  background: radial-gradient(circle at 50% 50%, #0A5C72, #052E3F);
   box-shadow:
     0 0 10px rgba(114, 229, 248, 0.45),
     inset 0 0 6px rgba(255, 255, 255, 0.18);

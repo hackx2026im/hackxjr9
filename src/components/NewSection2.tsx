@@ -24,7 +24,7 @@ const StatCard = ({
 }) => (
   <motion.div
     {...fade(delay)}
-    className={`relative overflow-hidden rounded-3xl bg-[#041A3A]/20 backdrop-blur-[40px] border border-white/5 shadow-sm transition-all duration-500 hover:bg-[#041A3A]/35 hover:border-white/10 group ${className}`}
+    className={`relative overflow-hidden rounded-3xl bg-[#052E3F]/20 backdrop-blur-[40px] border border-white/5 shadow-sm transition-all duration-500 hover:bg-[#052E3F]/35 hover:border-white/10 group ${className}`}
   >
     <PixelCanvas
       gap={10}
@@ -103,7 +103,7 @@ export default function NewSection2() {
       id="about"
       ref={sectionRef}
       onMouseMove={handleMouseMove}
-      className="relative w-full bg-[#010814] pt-12 md:pt-28 pb-0 overflow-hidden z-10"
+      className="relative w-full bg-[#010E13] pt-12 md:pt-28 pb-0 overflow-hidden z-10"
     >
       {/* Ambient blobs - Optimized without CSS blur */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -263,7 +263,7 @@ export default function NewSection2() {
             <div className="absolute inset-0 rounded-[2rem] bg-[#72E5F8] opacity-[0.06] blur-2xl pointer-events-none group-hover:opacity-[0.12] transition-opacity duration-700" />
 
             {/* Frame */}
-            <div className="relative rounded-[2rem] bg-[#010814]/90 p-3 md:p-5 border border-white/5">
+            <div className="relative rounded-[2rem] bg-[#010E13]/90 p-3 md:p-5 border border-white/5">
               <VimeoPlayer videoId={1203805610} poster={thumbnailUrl} />
             </div>
 
@@ -280,7 +280,7 @@ export default function NewSection2() {
       {/* Seamless bottom fade into next section */}
       <div
         className="absolute bottom-0 left-0 right-0 h-20 md:h-48 pointer-events-none z-40"
-        style={{ background: "linear-gradient(to bottom, transparent, #010814)" }}
+        style={{ background: "linear-gradient(to bottom, transparent, #010E13)" }}
       />
     </section>
   );

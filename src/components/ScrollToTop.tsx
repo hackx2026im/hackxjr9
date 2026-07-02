@@ -59,7 +59,7 @@ export default function ScrollToTop() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 260, damping: 20 }}
-          className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex items-center justify-center rounded-full bg-[#010814]/80 backdrop-blur-md shadow-2xl shadow-[#72E5F8]/20 group border border-white/10 hover:bg-[#18A0C0]/20 transition-colors"
+          className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex items-center justify-center rounded-full bg-[#010E13]/80 backdrop-blur-md shadow-2xl shadow-[#72E5F8]/20 group border border-white/10 hover:bg-[#18A0C0]/20 transition-colors"
           style={{ width: size, height: size }}
           aria-label="Scroll to top"
         >

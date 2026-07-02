@@ -39,7 +39,7 @@ const SkipButton = ({ containerRef }: { containerRef: React.RefObject<HTMLDivEle
               window.scrollBy({ top: rect.bottom, behavior: "smooth" });
             }
           }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[9999] flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#041a3a]/80 hover:bg-[#041a3a] backdrop-blur-md border border-white/20 text-white shadow-[0_0_20px_rgba(4,26,58,0.8)] transition-all group cursor-pointer pointer-events-auto"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[9999] flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#052E3F]/80 hover:bg-[#052E3F] backdrop-blur-md border border-white/20 text-white shadow-[0_0_20px_rgba(5,46,63,0.8)] transition-all group cursor-pointer pointer-events-auto"
         >
           <span className="font-semibold whitespace-nowrap text-sm tracking-wide">Skip Timeline</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-1 transition-transform">
@@ -242,15 +242,15 @@ function DesktopJourneySection() {
   }, []);
 
   return (
-    <section id="timeline" className="bg-[#010814] w-full relative">
+    <section id="timeline" className="bg-[#010E13] w-full relative">
       <div ref={containerRef} style={{ height: "1150vh" }}>
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           {/* Top screen feathering to guarantee no harsh lines against the previous section */}
-          <div className="absolute top-0 left-0 w-full h-[15vh] z-[100] pointer-events-none" style={{ background: "linear-gradient(to bottom, #010814 0%, transparent 100%)" }} />
+          <div className="absolute top-0 left-0 w-full h-[15vh] z-[100] pointer-events-none" style={{ background: "linear-gradient(to bottom, #010E13 0%, transparent 100%)" }} />
 
           {/* ── ATMOSPHERE ── */}
           <div className="absolute inset-0 z-0 pointer-events-none"
-            style={{ background: "radial-gradient(ellipse 150% 100% at 50% 130%, #041a3a 0%, #010814 60%)" }} />
+            style={{ background: "radial-gradient(ellipse 150% 100% at 50% 130%, #052E3F 0%, #010E13 60%)" }} />
           <div className="absolute inset-0 z-0 pointer-events-none"
             style={{ background: "linear-gradient(175deg, rgba(24,160,192,0.07) 0%, transparent 50%)" }} />
 
@@ -269,7 +269,7 @@ function DesktopJourneySection() {
 
           {/* Vignette */}
           <div className="absolute inset-0 z-10 pointer-events-none"
-            style={{ background: "radial-gradient(ellipse 160% 140% at 50% 50%, transparent 12%, #010814 100%)" }} />
+            style={{ background: "radial-gradient(ellipse 160% 140% at 50% 50%, transparent 12%, #010E13 100%)" }} />
 
           {/* ═══════════════════════════════════════════════════
               WORLD CANVAS
@@ -291,7 +291,7 @@ function DesktopJourneySection() {
             >
               <div className="font-extrabold tracking-tight" style={{
                 fontSize: "clamp(6rem, 18vw, 16rem)",
-                background: "linear-gradient(to bottom, #ffffff, #041a3a)",
+                background: "linear-gradient(to bottom, #ffffff, #052E3F)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 lineHeight: 1,
@@ -392,7 +392,7 @@ function DesktopJourneySection() {
             ))}
 
             {/* ── GRADIENT FLOOR (the shared ground) ──
-                Fades from transparent (screen ~88vh) into solid #010814 at the ground line,
+                Fades from transparent (screen ~88vh) into solid #010E13 at the ground line,
                 so every terrain image dissolves into the same bottom plain. zIndex 4 sits
                 above the images (3) but below the mountain (20) and the text nodes (30).
                 It rides the world canvas, so the ground moves with the camera. */}
@@ -401,7 +401,7 @@ function DesktopJourneySection() {
               top: `178vh`,
               width: `500vw`,
               height: "62vh",
-              background: "linear-gradient(to bottom, transparent 0%, #010814 28%, #010814 100%)",
+              background: "linear-gradient(to bottom, transparent 0%, #010E13 28%, #010E13 100%)",
               zIndex: 4,
             }} />
 
@@ -449,7 +449,7 @@ function DesktopJourneySection() {
                       <div className="absolute pointer-events-none" style={{
                         left: "50%", top: "50%", transform: "translate(-50%, -50%)",
                         width: "180%", height: "180%",
-                        background: "radial-gradient(ellipse at center, rgba(1,8,20,0.9) 0%, rgba(1,8,20,0.6) 40%, transparent 70%)",
+                        background: "radial-gradient(ellipse at center, rgba(1,14,19,0.9) 0%, rgba(1,14,19,0.6) 40%, transparent 70%)",
                         zIndex: -1,
                       }} />
                     )}
@@ -532,7 +532,7 @@ function DesktopJourneySection() {
             className="absolute bottom-0 left-0 w-full pointer-events-none"
             style={{
               height: "45vh",
-              background: "linear-gradient(to top, #010814 20%, rgba(1,8,20,0.85) 50%, transparent 100%)",
+              background: "linear-gradient(to top, #010E13 20%, rgba(1,14,19,0.85) 50%, transparent 100%)",
               opacity: exitFadeOp,
               zIndex: 100
             }}
@@ -664,15 +664,15 @@ function MobileJourneySection() {
   }, []);
 
   return (
-    <section id="timeline" className="bg-[#010814] w-full relative">
+    <section id="timeline" className="bg-[#010E13] w-full relative">
       {/* 660vh — scaled from 500vh to match the longer 7-stage pan, keeping the same pan speed */}
       <div ref={containerRef} style={{ height: "660vh" }}>
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[15vh] z-[100] pointer-events-none"
-            style={{ background: "linear-gradient(to bottom, #010814 0%, transparent 100%)" }} />
+            style={{ background: "linear-gradient(to bottom, #010E13 0%, transparent 100%)" }} />
 
           <div className="absolute inset-0 z-0 pointer-events-none"
-            style={{ background: "radial-gradient(ellipse 150% 100% at 50% 130%, #041a3a 0%, #010814 60%)" }} />
+            style={{ background: "radial-gradient(ellipse 150% 100% at 50% 130%, #052E3F 0%, #010E13 60%)" }} />
           <div className="absolute inset-0 z-0 pointer-events-none"
             style={{ background: "linear-gradient(175deg, rgba(24,160,192,0.07) 0%, transparent 50%)" }} />
 
@@ -689,7 +689,7 @@ function MobileJourneySection() {
           </div>
 
           <div className="absolute inset-0 z-10 pointer-events-none"
-            style={{ background: "radial-gradient(ellipse 160% 140% at 50% 50%, transparent 12%, #010814 100%)" }} />
+            style={{ background: "radial-gradient(ellipse 160% 140% at 50% 50%, transparent 12%, #010E13 100%)" }} />
 
           {/* World canvas — wider to fit mobile node spacing (490vw) */}
           <motion.div
@@ -709,7 +709,7 @@ function MobileJourneySection() {
             >
               <div className="font-extrabold tracking-tight" style={{
                 fontSize: "clamp(4rem, 28vw, 10rem)",
-                background: "linear-gradient(to bottom, #ffffff, #041a3a)",
+                background: "linear-gradient(to bottom, #ffffff, #052E3F)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 lineHeight: 1,
@@ -813,7 +813,7 @@ function MobileJourneySection() {
             </div>
 
             {/* Gradient floor — the shared ground; images dissolve into the bottom plain */}
-            <div className="absolute" style={{ left: 0, top: "178vh", width: "700vw", height: "62vh", background: "linear-gradient(to bottom, transparent 0%, #010814 28%, #010814 100%)", zIndex: 4 }} />
+            <div className="absolute" style={{ left: 0, top: "178vh", width: "700vw", height: "62vh", background: "linear-gradient(to bottom, transparent 0%, #010E13 28%, #010E13 100%)", zIndex: 4 }} />
 
             {/* Timeline line */}
             <div className="absolute" style={{
@@ -858,7 +858,7 @@ function MobileJourneySection() {
                       <div className="absolute pointer-events-none" style={{
                         left: "50%", top: "50%", transform: "translate(-50%, -50%)",
                         width: "180%", height: "180%",
-                        background: "radial-gradient(ellipse at center, rgba(1,8,20,0.9) 0%, rgba(1,8,20,0.6) 40%, transparent 70%)",
+                        background: "radial-gradient(ellipse at center, rgba(1,14,19,0.9) 0%, rgba(1,14,19,0.6) 40%, transparent 70%)",
                         zIndex: -1,
                       }} />
                     )}
@@ -930,7 +930,7 @@ function MobileJourneySection() {
 
           <motion.div className="absolute bottom-0 left-0 w-full pointer-events-none" style={{
             height: "45vh",
-            background: "linear-gradient(to top, #010814 20%, rgba(1,8,20,0.85) 50%, transparent 100%)",
+            background: "linear-gradient(to top, #010E13 20%, rgba(1,14,19,0.85) 50%, transparent 100%)",
             opacity: exitFadeOp, zIndex: 100,
           }} />
 

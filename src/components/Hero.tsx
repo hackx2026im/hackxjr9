@@ -85,8 +85,8 @@ export default function Hero() {
       <div style={{
         position: "absolute", inset: 0, zIndex: 4, pointerEvents: "none",
         background: [
-          "radial-gradient(ellipse 60% 60% at 50% 44%, rgba(1,8,20,0.1) 0%, rgba(1,8,20,0.65) 100%)",
-          "linear-gradient(to bottom, rgba(1,8,20,0.35) 0%, rgba(4,26,58,0.3) 50%, rgba(1,8,20,0.88) 100%)",
+          "radial-gradient(ellipse 60% 60% at 50% 44%, rgba(1,14,19,0.1) 0%, rgba(1,14,19,0.65) 100%)",
+          "linear-gradient(to bottom, rgba(1,14,19,0.35) 0%, rgba(5,46,63,0.3) 50%, rgba(1,14,19,0.88) 100%)",
         ].join(", "),
       }} />
 
@@ -166,7 +166,7 @@ export default function Hero() {
         bottom: "-2px",
         height: "clamp(180px, 35vh, 380px)",
         zIndex: 51,
-        background: "linear-gradient(to bottom, transparent 0%, rgba(1, 8, 20, 0.15) 20%, rgba(1, 8, 20, 0.6) 60%, rgba(1, 8, 20, 0.9) 85%, #010814 100%)",
+        background: "linear-gradient(to bottom, transparent 0%, rgba(1, 14, 19, 0.15) 20%, rgba(1, 14, 19, 0.6) 60%, rgba(1, 14, 19, 0.9) 85%, #010E13 100%)",
         pointerEvents: "none",
       }} />
 
@@ -183,7 +183,7 @@ export default function Hero() {
         <div style={{
           position: "absolute", bottom: 0, left: 0, right: 0,
           height: "300px", pointerEvents: "none", zIndex: -1,
-          background: "linear-gradient(to bottom, transparent 0%, rgba(1,8,20,0.45) 40%, rgba(1,8,20,0.78) 100%)",
+          background: "linear-gradient(to bottom, transparent 0%, rgba(1,14,19,0.45) 40%, rgba(1,14,19,0.78) 100%)",
         }} />
 
         <motion.p

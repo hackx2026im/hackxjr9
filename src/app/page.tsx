@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main style={{ background: "#010814", width: "100%", overflowX: "clip" }}>
+      <main style={{ background: "#010E13", width: "100%", overflowX: "clip" }}>
         <Hero />
         <NewSection2 />
         <CriteriaSection />

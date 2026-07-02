@@ -81,7 +81,7 @@ const MemoryFace = ({ memory }: { memory: Memory }) => (
     />
 
     {/* Bottom gradient for legibility — always on mobile, on hover for desktop */}
-    <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#010814] via-[#010814]/20 to-transparent opacity-90 md:via-transparent md:opacity-70 md:group-hover:opacity-90 transition-opacity duration-300 pointer-events-none" />
+    <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#010E13] via-[#010E13]/20 to-transparent opacity-90 md:via-transparent md:opacity-70 md:group-hover:opacity-90 transition-opacity duration-300 pointer-events-none" />
 
     {/* Caption — always visible on mobile (no hover), reveal on hover for desktop */}
     <div className="absolute inset-0 z-20 flex flex-col justify-end p-4 md:p-6 transition-all duration-300 opacity-100 translate-y-0 md:opacity-0 md:translate-y-3 md:group-hover:opacity-100 md:group-hover:translate-y-0">
@@ -170,9 +170,9 @@ export default function MemoriesSection() {
   const mobileVisible = Array.from({ length: MOBILE_WINDOW }, (_, i) => memories[(mobileStart + i) % memories.length]);
 
   return (
-    <section id="memories" className="relative w-full bg-[#010814] pt-12 pb-10 md:py-20 overflow-hidden z-10">
+    <section id="memories" className="relative w-full bg-[#010E13] pt-12 pb-10 md:py-20 overflow-hidden z-10">
       {/* Seamless top blend */}
-      <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none" style={{ background: "linear-gradient(to bottom, #010814, transparent)" }} />
+      <div className="absolute top-0 left-0 right-0 h-32 pointer-events-none" style={{ background: "linear-gradient(to bottom, #010E13, transparent)" }} />
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 relative z-10 mb-10 md:mb-12">
         <motion.div

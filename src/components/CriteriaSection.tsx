@@ -67,7 +67,7 @@ export default function CriteriaSection() {
   });
 
   return (
-    <section id="criteria" ref={sectionRef} className="relative w-full bg-[#010814] pt-6 pb-10 md:py-20 overflow-hidden z-10">
+    <section id="criteria" ref={sectionRef} className="relative w-full bg-[#010E13] pt-6 pb-10 md:py-20 overflow-hidden z-10">
       
       {/* Background Ambient - Optimized */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -111,7 +111,7 @@ export default function CriteriaSection() {
                 </div>
 
                 {/* Inner Card Body */}
-                <div className="relative p-6 sm:p-8 md:p-10 rounded-[23px] bg-[#010814] h-full w-full flex flex-col items-center text-center group-hover:bg-[#020d20] transition-colors duration-300 z-20">
+                <div className="relative p-6 sm:p-8 md:p-10 rounded-[23px] bg-[#010E13] h-full w-full flex flex-col items-center text-center group-hover:bg-[#052E3F] transition-colors duration-300 z-20">
                   {/* Visual Grid Decorator */}
                   <CardDecorator 
                     imageUrl={item.imageUrl}
@@ -132,7 +132,7 @@ export default function CriteriaSection() {
       {/* Section bottom fade for visual separation */}
       <div 
         className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none" 
-        style={{ background: "linear-gradient(to bottom, transparent, #010814)" }} 
+        style={{ background: "linear-gradient(to bottom, transparent, #010E13)" }} 
       />
     </section>
   );

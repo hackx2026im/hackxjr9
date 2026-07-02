@@ -129,7 +129,7 @@ function CoordCard({ coord, index }: { coord: typeof coordinators[0], index: num
         ref={cardRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
-        className="relative w-full h-full flex flex-col justify-end p-5 md:p-6 rounded-[24px] overflow-hidden bg-[#010814]"
+        className="relative w-full h-full flex flex-col justify-end p-5 md:p-6 rounded-[24px] overflow-hidden bg-[#010E13]"
       >
         
         {/* Radar Ripple Background */}
@@ -172,7 +172,7 @@ function CoordCard({ coord, index }: { coord: typeof coordinators[0], index: num
 
         {/* Blurred fade overlay from the bottom up behind the text details */}
         <div 
-          className="absolute inset-x-0 bottom-0 h-[60%] z-[3] bg-gradient-to-t from-[#010814] via-[#010814]/80 to-transparent backdrop-blur-md pointer-events-none transition-all duration-500 group-hover:h-[65%]"
+          className="absolute inset-x-0 bottom-0 h-[60%] z-[3] bg-gradient-to-t from-[#010E13] via-[#010E13]/80 to-transparent backdrop-blur-md pointer-events-none transition-all duration-500 group-hover:h-[65%]"
           style={{
             maskImage: "linear-gradient(to top, black 40%, transparent 100%)",
             WebkitMaskImage: "linear-gradient(to top, black 40%, transparent 100%)",
@@ -337,7 +337,7 @@ export default function TeamSection() {
   return (
     <section 
       id="oc"
-      className="relative w-full bg-[#010814] pt-10 pb-10 md:py-20 overflow-hidden z-10" 
+      className="relative w-full bg-[#010E13] pt-10 pb-10 md:py-20 overflow-hidden z-10" 
     >
       {/* Ambient background blur */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -396,10 +396,10 @@ export default function TeamSection() {
       </div>
 
       {/* Auto-advancing infinite native scroll container */}
-      <div className="relative w-full overflow-hidden bg-[#010814] mt-8 md:mt-12">
+      <div className="relative w-full overflow-hidden bg-[#010E13] mt-8 md:mt-12">
         {/* Shadow overlays for smooth fade on edges */}
-        <div className="absolute top-0 bottom-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#010814] to-transparent z-20 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#010814] to-transparent z-20 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#010E13] to-transparent z-20 pointer-events-none" />
+        <div className="absolute top-0 bottom-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#010E13] to-transparent z-20 pointer-events-none" />
         
         <div 
           ref={scrollRef}
@@ -424,7 +424,7 @@ export default function TeamSection() {
       {/* Seamless blend into the next dark section */}
       <div
         className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, transparent, #010814)" }}
+        style={{ background: "linear-gradient(to bottom, transparent, #010E13)" }}
       />
     </section>
   );

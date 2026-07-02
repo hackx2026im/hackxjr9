@@ -57,8 +57,8 @@ export default function ShaderBackground() {
         float f = fbm(uv + r);
 
         // Brand palette: deep navy → dark blue → hint of royal
-        vec3 col1 = vec3(0.004, 0.031, 0.078);  // #010814 deep navy
-        vec3 col2 = vec3(0.016, 0.102, 0.235);  // #041A3A dark blue  
+        vec3 col1 = vec3(0.004, 0.055, 0.075);  // #010E13 deep teal-black
+        vec3 col2 = vec3(0.020, 0.180, 0.247);  // #052E3F dark teal  
         vec3 col3 = vec3(0.039, 0.361, 0.447);  // #0A5C72 deep teal
         vec3 col4 = vec3(0.094, 0.627, 0.753);  // #18A0C0 teal hint
 
