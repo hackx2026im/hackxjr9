@@ -59,8 +59,8 @@ export default function ShaderBackground() {
         // Brand palette: deep navy → dark blue → hint of royal
         vec3 col1 = vec3(0.004, 0.031, 0.078);  // #010814 deep navy
         vec3 col2 = vec3(0.016, 0.102, 0.235);  // #041A3A dark blue  
-        vec3 col3 = vec3(0.039, 0.220, 0.470);  // #0A3878 navy
-        vec3 col4 = vec3(0.102, 0.435, 0.831);  // #1A6FD4 royal hint
+        vec3 col3 = vec3(0.039, 0.361, 0.447);  // #0A5C72 deep teal
+        vec3 col4 = vec3(0.094, 0.627, 0.753);  // #18A0C0 teal hint
 
         vec3 color = mix(col1, col2, clamp(f * 2.0, 0.0, 1.0));
         color = mix(color, col3, clamp(f * f * 4.0, 0.0, 0.4));

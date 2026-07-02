@@ -130,7 +130,7 @@ export default function Hero() {
             style={{
               display: "block",
               fontSize: "clamp(1.9rem, 7.5vw, 3.75rem)",
-              background: "linear-gradient(100deg, #5BB8FF 0%, #d6f0ff 50%, #5BB8FF 100%)",
+              background: "linear-gradient(100deg, #72E5F8 0%, #d6f9ff 50%, #72E5F8 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -250,7 +250,7 @@ export default function Hero() {
           {/* Scroll wheel — flexbox for reliable dot centering */}
           <div style={{
             width: "22px", height: "36px",
-            border: "1.5px solid rgba(91,184,255,0.22)",
+            border: "1.5px solid rgba(114,229,248,0.22)",
             borderRadius: "11px",
             display: "flex",
             justifyContent: "center",
@@ -261,7 +261,7 @@ export default function Hero() {
             <div className="scroll-dot" style={{
               width: "4px", height: "4px",
               borderRadius: "50%",
-              background: "#5BB8FF",
+              background: "#72E5F8",
               flexShrink: 0,
             }} />
           </div>

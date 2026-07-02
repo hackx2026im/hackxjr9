@@ -69,7 +69,7 @@ export default function PrizesSection() {
           animate={{ scale: [1, 1.15, 1], opacity: [0.06, 0.1, 0.06] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] rounded-full"
-          style={{ background: "radial-gradient(ellipse, rgba(91,184,255,0.06) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(ellipse, rgba(114,229,248,0.06) 0%, transparent 70%)" }}
         />
       </div>
 

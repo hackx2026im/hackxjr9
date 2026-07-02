@@ -43,7 +43,7 @@ export default function Footer() {
               style={{
                 objectFit: "contain",
                 filter:
-                  "brightness(0) saturate(100%) invert(30%) sepia(90%) saturate(1500%) hue-rotate(200deg) brightness(1.6) drop-shadow(0 0 40px #1A6FD4) drop-shadow(0 0 80px rgba(26,111,212,0.4))"
+                  "brightness(0) saturate(100%) invert(30%) sepia(90%) saturate(1500%) hue-rotate(200deg) brightness(1.6) drop-shadow(0 0 40px #18A0C0) drop-shadow(0 0 80px rgba(24,160,192,0.4))"
               }}
             />
           </div>

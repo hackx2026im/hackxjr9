@@ -56,7 +56,7 @@ export default function FAQSection() {
     <section id="faq" className="relative w-full bg-[#010814] pt-10 pb-12 md:py-20 overflow-hidden z-10">
       {/* Background Ambient */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#5BB8FF]/5 rounded-full blur-[150px]" />
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#72E5F8]/5 rounded-full blur-[150px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 relative z-10">
@@ -123,10 +123,10 @@ export default function FAQSection() {
                           strokeDashoffset: { duration: 0.8, ease: "easeInOut" }
                         }}
                         fill="none" 
-                        stroke="#5BB8FF" 
+                        stroke="#72E5F8" 
                         strokeWidth="2.5"
                         strokeDasharray="1000"
-                        style={{ filter: "drop-shadow(0 0 8px rgba(91,184,255,0.8))" }}
+                        style={{ filter: "drop-shadow(0 0 8px rgba(114,229,248,0.8))" }}
                       />
                     </svg>
                   </motion.div>
@@ -138,12 +138,12 @@ export default function FAQSection() {
                     transition={{ duration: 0.6, delay: 0.8 + (idx * 0.15) }}
                   >
                     <div 
-                      className={`relative overflow-hidden rounded-2xl border transition-all duration-500 cursor-pointer backdrop-blur-md z-10 ${isActive ? 'bg-[#041A3A]/60 border-[#5BB8FF]/40 shadow-[0_0_30px_rgba(91,184,255,0.1)]' : 'bg-white/[0.02] border-white/5 hover:bg-white/[0.05]'}`}
+                      className={`relative overflow-hidden rounded-2xl border transition-all duration-500 cursor-pointer backdrop-blur-md z-10 ${isActive ? 'bg-[#041A3A]/60 border-[#72E5F8]/40 shadow-[0_0_30px_rgba(114,229,248,0.1)]' : 'bg-white/[0.02] border-white/5 hover:bg-white/[0.05]'}`}
                       onClick={() => setActiveIdx(isActive ? null : idx)}
                     >
                       <div className="p-6 flex justify-between items-center relative">
                     <div>
-                      <div className={`text-[10px] tracking-[0.2em] font-mono mb-2 transition-colors duration-300 ${isActive ? 'text-[#5BB8FF]' : 'text-white/40'}`}>
+                      <div className={`text-[10px] tracking-[0.2em] font-mono mb-2 transition-colors duration-300 ${isActive ? 'text-[#72E5F8]' : 'text-white/40'}`}>
                         {faq.id} {faq.category}
                       </div>
                       <h3 className={`text-base xl:text-lg font-bold tracking-wide transition-colors duration-300 uppercase ${isActive ? 'text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]' : 'text-white/80'}`}>
@@ -151,7 +151,7 @@ export default function FAQSection() {
                       </h3>
                     </div>
                     
-                    <div className={`shrink-0 flex items-center justify-center w-10 h-10 rounded-full transition-all duration-500 ${isActive ? 'bg-[#5BB8FF] text-[#010814] rotate-180 shadow-[0_0_15px_rgba(91,184,255,0.5)]' : 'bg-white/5 text-white/50'}`}>
+                    <div className={`shrink-0 flex items-center justify-center w-10 h-10 rounded-full transition-all duration-500 ${isActive ? 'bg-[#72E5F8] text-[#010814] rotate-180 shadow-[0_0_15px_rgba(114,229,248,0.5)]' : 'bg-white/5 text-white/50'}`}>
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>
@@ -194,7 +194,7 @@ export default function FAQSection() {
                 alt="Diver"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-auto drop-shadow-[0_0_50px_rgba(91,184,255,0.2)] animate-[float_6s_ease-in-out_infinite]"
+                className="w-full h-auto drop-shadow-[0_0_50px_rgba(114,229,248,0.2)] animate-[float_6s_ease-in-out_infinite]"
               />
             </motion.div>
           </div>
@@ -213,7 +213,7 @@ export default function FAQSection() {
                 alt="Diver"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-auto drop-shadow-[0_0_20px_rgba(91,184,255,0.15)] animate-[float_6s_ease-in-out_infinite]"
+                className="w-full h-auto drop-shadow-[0_0_20px_rgba(114,229,248,0.15)] animate-[float_6s_ease-in-out_infinite]"
               />
           </motion.div>
           
@@ -230,19 +230,19 @@ export default function FAQSection() {
                   transition={{ duration: 0.5, delay: 0.3 + (idx * 0.1) }}
                 >
                   <div 
-                    className={`relative p-5 rounded-2xl border transition-colors duration-300 overflow-hidden ${isActive ? 'bg-[#041A3A]/40 border-[#5BB8FF]/30' : 'bg-white/[0.02] border-white/5'}`}
+                    className={`relative p-5 rounded-2xl border transition-colors duration-300 overflow-hidden ${isActive ? 'bg-[#041A3A]/40 border-[#72E5F8]/30' : 'bg-white/[0.02] border-white/5'}`}
                     onClick={() => setActiveIdx(isActive ? null : idx)}
                   >
                     <div className="flex justify-between items-start gap-4 cursor-pointer">
                     <div>
-                      <div className={`text-[10px] tracking-[0.2em] font-mono mb-1 transition-colors duration-300 ${isActive ? 'text-[#5BB8FF]' : 'text-white/40'}`}>
+                      <div className={`text-[10px] tracking-[0.2em] font-mono mb-1 transition-colors duration-300 ${isActive ? 'text-[#72E5F8]' : 'text-white/40'}`}>
                         {faq.id} {faq.category}
                       </div>
                       <h3 className={`text-sm md:text-base font-bold leading-snug transition-colors duration-300 ${isActive ? 'text-white' : 'text-white/80'}`}>
                         {faq.title}
                       </h3>
                     </div>
-                    <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 mt-1 ${isActive ? 'bg-[#5BB8FF] text-[#010814] rotate-180' : 'bg-white/5 text-white/50'}`}>
+                    <div className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-full transition-all duration-300 mt-1 ${isActive ? 'bg-[#72E5F8] text-[#010814] rotate-180' : 'bg-white/5 text-white/50'}`}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                       </svg>

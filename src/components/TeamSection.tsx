@@ -114,14 +114,14 @@ function CoordCard({ coord, index }: { coord: typeof coordinators[0], index: num
   return (
     <BorderGlow
       edgeSensitivity={30}
-      glowColor="205 100 68" // Brand Sky Blue HSL
+      glowColor="189 90 71" // Brand Cyan HSL
       backgroundColor="rgba(3, 17, 38, 0.4)"
       borderRadius={24}
       glowRadius={32}
       glowIntensity={1.1}
       coneSpread={25}
       animated={false}
-      colors={['#1A6FD4', '#5BB8FF', '#0A3878']}
+      colors={['#18A0C0', '#72E5F8', '#0A5C72']}
       fillOpacity={0}
       className="w-full h-full group"
     >
@@ -137,7 +137,7 @@ function CoordCard({ coord, index }: { coord: typeof coordinators[0], index: num
           {[0, 1, 2, 3].map((i) => (
             <motion.div
               key={i}
-              className="absolute rounded-full border-[1.5px] border-[#5BB8FF]/20"
+              className="absolute rounded-full border-[1.5px] border-[#72E5F8]/20"
               initial={{ width: 0, height: 0, opacity: 0.6 }}
               animate={{ width: "250%", height: "250%", opacity: 0 }}
               transition={{
@@ -150,7 +150,7 @@ function CoordCard({ coord, index }: { coord: typeof coordinators[0], index: num
             />
           ))}
           {/* Subtle glowing core */}
-          <div className="absolute w-32 h-32 rounded-full bg-gradient-to-tr from-[#1A6FD4]/30 to-[#5BB8FF]/10 blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
+          <div className="absolute w-32 h-32 rounded-full bg-gradient-to-tr from-[#18A0C0]/30 to-[#72E5F8]/10 blur-3xl group-hover:scale-125 transition-transform duration-700"></div>
         </div>
 
         {/* Background Image Container */}
@@ -184,7 +184,7 @@ function CoordCard({ coord, index }: { coord: typeof coordinators[0], index: num
           <p className="text-white font-extrabold text-lg md:text-xl tracking-tight leading-tight mb-1 text-center">
             {coord.name}
           </p>
-          <p className="text-[#5BB8FF] text-xs md:text-sm font-semibold tracking-wide mb-4 text-center">
+          <p className="text-[#72E5F8] text-xs md:text-sm font-semibold tracking-wide mb-4 text-center">
             {coord.role}
           </p>
 
@@ -192,7 +192,7 @@ function CoordCard({ coord, index }: { coord: typeof coordinators[0], index: num
           <div className="flex gap-2 w-full">
             <a
               href={`mailto:${coord.email}`}
-              className="flex-1 py-2 px-2.5 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md hover:bg-[#1A6FD4]/20 hover:border-[#5BB8FF]/30 transition-all duration-300 text-center flex items-center justify-center gap-1.5 text-xs text-white/80 hover:text-white"
+              className="flex-1 py-2 px-2.5 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md hover:bg-[#18A0C0]/20 hover:border-[#72E5F8]/30 transition-all duration-300 text-center flex items-center justify-center gap-1.5 text-xs text-white/80 hover:text-white"
               onClick={e => e.stopPropagation()}
             >
               <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -202,7 +202,7 @@ function CoordCard({ coord, index }: { coord: typeof coordinators[0], index: num
             </a>
             <a
               href={`tel:${coord.phone.replace(/\s/g, "")}`}
-              className="flex-1 py-2 px-2.5 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md hover:bg-[#1A6FD4]/20 hover:border-[#5BB8FF]/30 transition-all duration-300 text-center flex items-center justify-center gap-1.5 text-xs text-white/80 hover:text-white"
+              className="flex-1 py-2 px-2.5 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md hover:bg-[#18A0C0]/20 hover:border-[#72E5F8]/30 transition-all duration-300 text-center flex items-center justify-center gap-1.5 text-xs text-white/80 hover:text-white"
               onClick={e => e.stopPropagation()}
             >
               <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -345,7 +345,7 @@ export default function TeamSection() {
           animate={{ x: [0, 30, -30, 0], y: [0, -20, 20, 0] }}
           transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
           className="absolute top-1/3 right-0 w-[400px] h-[400px] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(91,184,255,0.04) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(114,229,248,0.04) 0%, transparent 70%)" }}
         />
       </div>
 

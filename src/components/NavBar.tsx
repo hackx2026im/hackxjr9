@@ -162,11 +162,11 @@ export default function NavBar() {
               rel="noopener noreferrer"
               className="hidden sm:flex items-center justify-center px-4 lg:px-5 py-1.5 lg:py-2 rounded-full text-[13px] lg:text-sm xl:text-[15px] font-bold text-white transition-all duration-300"
               style={{
-                background: "linear-gradient(135deg, #1A6FD4 0%, #5BB8FF 100%)",
-                boxShadow: "0 0 20px rgba(91,184,255,0.25), inset 0 1px 0 rgba(255,255,255,0.2)",
+                background: "linear-gradient(135deg, #18A0C0 0%, #72E5F8 100%)",
+                boxShadow: "0 0 20px rgba(114,229,248,0.25), inset 0 1px 0 rgba(255,255,255,0.2)",
               }}
-              onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 0 32px rgba(91,184,255,0.5), inset 0 1px 0 rgba(255,255,255,0.2)")}
-              onMouseLeave={e => (e.currentTarget.style.boxShadow = "0 0 20px rgba(91,184,255,0.25), inset 0 1px 0 rgba(255,255,255,0.2)")}
+              onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 0 32px rgba(114,229,248,0.5), inset 0 1px 0 rgba(255,255,255,0.2)")}
+              onMouseLeave={e => (e.currentTarget.style.boxShadow = "0 0 20px rgba(114,229,248,0.25), inset 0 1px 0 rgba(255,255,255,0.2)")}
             >
               Register Now
             </a>
@@ -222,7 +222,7 @@ export default function NavBar() {
                       }}
                       className={`px-4 py-3 rounded-xl text-sm font-semibold transition-colors border ${
                         isActive
-                          ? "text-white bg-[#1A6FD4]/20 border-[#5BB8FF]/20"
+                          ? "text-white bg-[#18A0C0]/20 border-[#72E5F8]/20"
                           : "text-white/80 border-transparent hover:text-white hover:bg-white/5"
                       }`}
                     >
@@ -237,7 +237,7 @@ export default function NavBar() {
                   rel="noopener noreferrer"
                   className="w-full flex sm:hidden items-center justify-center px-5 py-3 rounded-xl text-sm font-bold text-white transition-all duration-300 mt-2"
                   style={{
-                    background: "linear-gradient(135deg, #1A6FD4 0%, #5BB8FF 100%)",
+                    background: "linear-gradient(135deg, #18A0C0 0%, #72E5F8 100%)",
                   }}
                   onClick={() => setMobileMenuOpen(false)}
                 >

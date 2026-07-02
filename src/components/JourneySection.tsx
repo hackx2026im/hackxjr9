@@ -136,8 +136,8 @@ function TimelineBackdrops({ cx, width = 42 }: { cx: number[]; width?: number })
   );
 }
 
-const BRAND = "#5BB8FF";
-const BRAND2 = "#1A6FD4";
+const BRAND = "#72E5F8";
+const BRAND2 = "#18A0C0";
 
 const STAGES = [
   {
@@ -252,7 +252,7 @@ function DesktopJourneySection() {
           <div className="absolute inset-0 z-0 pointer-events-none"
             style={{ background: "radial-gradient(ellipse 150% 100% at 50% 130%, #041a3a 0%, #010814 60%)" }} />
           <div className="absolute inset-0 z-0 pointer-events-none"
-            style={{ background: "linear-gradient(175deg, rgba(26,111,212,0.07) 0%, transparent 50%)" }} />
+            style={{ background: "linear-gradient(175deg, rgba(24,160,192,0.07) 0%, transparent 50%)" }} />
 
           {/* Bubbles */}
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -260,7 +260,7 @@ function DesktopJourneySection() {
               <span key={i} className="absolute rounded-full" style={{
                 width: `${3 + (i % 5) * 2}px`, height: `${3 + (i % 5) * 2}px`,
                 left: `${3 + i * 7}%`, bottom: "-5%",
-                background: "rgba(91,184,255,0.07)", border: "1px solid rgba(91,184,255,0.09)",
+                background: "rgba(114,229,248,0.07)", border: "1px solid rgba(114,229,248,0.09)",
                 animation: `rise ${5 + (i % 6)}s ease-in infinite`,
                 animationDelay: `${i * 0.6}s`,
               }} />
@@ -409,12 +409,12 @@ function DesktopJourneySection() {
             <div className="absolute" style={{
               left: `${LINE_L}vw`, top: `${LINE_Y}vh`,
               width: `${LINE_W}vw`, height: "3px",
-              background: "rgba(91,184,255,0.15)", zIndex: 1, // Behind images!
+              background: "rgba(114,229,248,0.15)", zIndex: 1, // Behind images!
             }}>
               <motion.div className="absolute left-0 top-0 h-full" style={{
                 width: "100%", scaleX: lineScale, transformOrigin: "left center",
                 background: `linear-gradient(90deg, transparent, ${BRAND2} 50%, #ffffff)`,
-                boxShadow: `0 0 20px 5px rgba(91,184,255,0.6), 0 0 40px 10px rgba(91,184,255,0.2)`,
+                boxShadow: `0 0 20px 5px rgba(114,229,248,0.6), 0 0 40px 10px rgba(114,229,248,0.2)`,
               }} />
             </div>
 
@@ -465,7 +465,7 @@ function DesktopJourneySection() {
                       fontSize: isGF ? "clamp(1.5rem, 2vw, 2rem)" : "clamp(1.1rem, 1.4vw, 1.5rem)",
                       lineHeight: 1.15, marginBottom: "0.4rem",
                       textShadow: isGF
-                        ? `0 0 30px rgba(91,184,255,0.6), 0 4px 20px rgba(0,0,0,0.9)`
+                        ? `0 0 30px rgba(114,229,248,0.6), 0 4px 20px rgba(0,0,0,0.9)`
                         : `0 4px 15px rgba(0,0,0,0.9)`,
                     }}>
                       {stage.title}
@@ -485,8 +485,8 @@ function DesktopJourneySection() {
                         width: "2px",
                         height: "16px",
                         ...(isBelow
-                          ? { top: 0, background: `linear-gradient(to top, rgba(91,184,255,0.5), transparent)` }
-                          : { bottom: 0, background: `linear-gradient(to bottom, rgba(91,184,255,0.5), transparent)` }),
+                          ? { top: 0, background: `linear-gradient(to top, rgba(114,229,248,0.5), transparent)` }
+                          : { bottom: 0, background: `linear-gradient(to bottom, rgba(114,229,248,0.5), transparent)` }),
                       }} />
                     )}
                   </motion.div>
@@ -502,8 +502,8 @@ function DesktopJourneySection() {
                       height: isGF ? "16px" : "12px",
                       background: "#ffffff",
                       boxShadow: isGF
-                        ? `0 0 25px 8px rgba(91,184,255,0.9), inset 0 0 8px rgba(91,184,255,1)`
-                        : `0 0 15px 5px rgba(91,184,255,0.7), inset 0 0 4px rgba(91,184,255,1)`,
+                        ? `0 0 25px 8px rgba(114,229,248,0.9), inset 0 0 8px rgba(114,229,248,1)`
+                        : `0 0 15px 5px rgba(114,229,248,0.7), inset 0 0 4px rgba(114,229,248,1)`,
                       zIndex: 2,
                       opacity: nodeOps[i],
                     }}
@@ -520,10 +520,10 @@ function DesktopJourneySection() {
             transition={{ duration: 0.7 }}
             className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-50 pointer-events-none"
           >
-            <span style={{ color: "rgba(91,184,255,0.38)", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase", fontWeight: 500, marginBottom: "0.75rem" }}>
+            <span style={{ color: "rgba(114,229,248,0.38)", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase", fontWeight: 500, marginBottom: "0.75rem" }}>
               Scroll to explore
             </span>
-            <div style={{ width: "1px", height: "40px", background: "linear-gradient(to bottom, rgba(91,184,255,0.38), transparent)" }}
+            <div style={{ width: "1px", height: "40px", background: "linear-gradient(to bottom, rgba(114,229,248,0.38), transparent)" }}
               className="animate-pulse" />
           </motion.div>
 
@@ -674,14 +674,14 @@ function MobileJourneySection() {
           <div className="absolute inset-0 z-0 pointer-events-none"
             style={{ background: "radial-gradient(ellipse 150% 100% at 50% 130%, #041a3a 0%, #010814 60%)" }} />
           <div className="absolute inset-0 z-0 pointer-events-none"
-            style={{ background: "linear-gradient(175deg, rgba(26,111,212,0.07) 0%, transparent 50%)" }} />
+            style={{ background: "linear-gradient(175deg, rgba(24,160,192,0.07) 0%, transparent 50%)" }} />
 
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
             {Array.from({ length: 14 }).map((_, i) => (
               <span key={i} className="absolute rounded-full" style={{
                 width: `${3 + (i % 5) * 2}px`, height: `${3 + (i % 5) * 2}px`,
                 left: `${3 + i * 7}%`, bottom: "-5%",
-                background: "rgba(91,184,255,0.07)", border: "1px solid rgba(91,184,255,0.09)",
+                background: "rgba(114,229,248,0.07)", border: "1px solid rgba(114,229,248,0.09)",
                 animation: `rise ${5 + (i % 6)}s ease-in infinite`,
                 animationDelay: `${i * 0.6}s`,
               }} />
@@ -744,7 +744,7 @@ function MobileJourneySection() {
                 width: "160vw", height: "160vw",
                 marginLeft: "-80vw", marginTop: "-80vw",
                 borderRadius: "50%",
-                background: "radial-gradient(ellipse at center, rgba(255,255,255,0.95) 0%, rgba(180,220,255,0.85) 20%, rgba(91,184,255,0.5) 50%, transparent 72%)",
+                background: "radial-gradient(ellipse at center, rgba(255,255,255,0.95) 0%, rgba(180,220,255,0.85) 20%, rgba(114,229,248,0.5) 50%, transparent 72%)",
                 filter: "blur(28px)",
                 x: cloudX,
                 opacity: cloudOp,
@@ -819,12 +819,12 @@ function MobileJourneySection() {
             <div className="absolute" style={{
               left: `${LINE_L}vw`, top: `${LINE_Y}vh`,
               width: `${LINE_W_M}vw`, height: "2px",
-              background: "rgba(91,184,255,0.15)", zIndex: 1,
+              background: "rgba(114,229,248,0.15)", zIndex: 1,
             }}>
               <motion.div className="absolute left-0 top-0 h-full" style={{
                 width: "100%", scaleX: lineScale, transformOrigin: "left center",
                 background: `linear-gradient(90deg, transparent, ${BRAND2} 50%, #ffffff)`,
-                boxShadow: "0 0 20px 5px rgba(91,184,255,0.6), 0 0 40px 10px rgba(91,184,255,0.2)",
+                boxShadow: "0 0 20px 5px rgba(114,229,248,0.6), 0 0 40px 10px rgba(114,229,248,0.2)",
               }} />
             </div>
 
@@ -874,7 +874,7 @@ function MobileJourneySection() {
                       fontSize: isGF ? "clamp(1rem, 4.5vw, 1.4rem)" : "clamp(0.85rem, 3.8vw, 1.2rem)",
                       lineHeight: 1.15, marginBottom: "0.35rem",
                       textShadow: isGF
-                        ? "0 0 30px rgba(91,184,255,0.6), 0 4px 20px rgba(0,0,0,0.9)"
+                        ? "0 0 30px rgba(114,229,248,0.6), 0 4px 20px rgba(0,0,0,0.9)"
                         : "0 4px 15px rgba(0,0,0,0.9)",
                     }}>
                       {stage.title}
@@ -891,8 +891,8 @@ function MobileJourneySection() {
                       <div className="absolute" style={{
                         left: "10px", width: "2px", height: "16px",
                         ...(isBelow
-                          ? { top: 0, background: "linear-gradient(to top, rgba(91,184,255,0.5), transparent)" }
-                          : { bottom: 0, background: "linear-gradient(to bottom, rgba(91,184,255,0.5), transparent)" }),
+                          ? { top: 0, background: "linear-gradient(to top, rgba(114,229,248,0.5), transparent)" }
+                          : { bottom: 0, background: "linear-gradient(to bottom, rgba(114,229,248,0.5), transparent)" }),
                       }} />
                     )}
                   </motion.div>
@@ -905,8 +905,8 @@ function MobileJourneySection() {
                     height: isGF ? "16px" : "12px",
                     background: "#ffffff",
                     boxShadow: isGF
-                      ? "0 0 25px 8px rgba(91,184,255,0.9), inset 0 0 8px rgba(91,184,255,1)"
-                      : "0 0 15px 5px rgba(91,184,255,0.7), inset 0 0 4px rgba(91,184,255,1)",
+                      ? "0 0 25px 8px rgba(114,229,248,0.9), inset 0 0 8px rgba(114,229,248,1)"
+                      : "0 0 15px 5px rgba(114,229,248,0.7), inset 0 0 4px rgba(114,229,248,1)",
                     zIndex: 2,
                     opacity: nodeOps[i],
                   }} />
@@ -921,10 +921,10 @@ function MobileJourneySection() {
             transition={{ duration: 0.7 }}
             className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-50 pointer-events-none"
           >
-            <span style={{ color: "rgba(91,184,255,0.38)", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase", fontWeight: 500, marginBottom: "0.75rem" }}>
+            <span style={{ color: "rgba(114,229,248,0.38)", fontSize: "0.6rem", letterSpacing: "0.4em", textTransform: "uppercase", fontWeight: 500, marginBottom: "0.75rem" }}>
               Scroll to explore
             </span>
-            <div style={{ width: "1px", height: "40px", background: "linear-gradient(to bottom, rgba(91,184,255,0.38), transparent)" }}
+            <div style={{ width: "1px", height: "40px", background: "linear-gradient(to bottom, rgba(114,229,248,0.38), transparent)" }}
               className="animate-pulse" />
           </motion.div>
 

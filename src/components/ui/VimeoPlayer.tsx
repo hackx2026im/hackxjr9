@@ -250,7 +250,7 @@ export default function VimeoPlayer({
       {/* Loading shimmer before ready */}
       {shouldLoad && !ready && (
         <div className="absolute inset-0 grid place-items-center bg-black/40">
-          <div className="size-10 animate-spin rounded-full border-2 border-white/15 border-t-[#5BB8FF]" />
+          <div className="size-10 animate-spin rounded-full border-2 border-white/15 border-t-[#72E5F8]" />
         </div>
       )}
 
@@ -281,7 +281,7 @@ export default function VimeoPlayer({
         <button
           type="button"
           onClick={toggleMute}
-          className="absolute right-4 top-4 z-30 flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-md border border-white/15 transition-colors hover:bg-[#5BB8FF]/25 hover:border-[#5BB8FF]/40"
+          className="absolute right-4 top-4 z-30 flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-white backdrop-blur-md border border-white/15 transition-colors hover:bg-[#72E5F8]/25 hover:border-[#72E5F8]/40"
         >
           <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M11 5 6 9H2v6h4l5 4V5z" />
@@ -319,7 +319,7 @@ export default function VimeoPlayer({
             {/* buffered */}
             <div className="absolute inset-y-0 left-0 rounded-full bg-white/25" style={{ width: `${buffered * 100}%` }} />
             {/* played */}
-            <div className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-[#1A6FD4] to-[#5BB8FF]" style={{ width: `${progressPct}%` }} />
+            <div className="absolute inset-y-0 left-0 rounded-full bg-gradient-to-r from-[#18A0C0] to-[#72E5F8]" style={{ width: `${progressPct}%` }} />
           </div>
           {/* scrubber handle */}
           <div

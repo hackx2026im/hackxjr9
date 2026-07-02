@@ -29,17 +29,17 @@ const StatCard = ({
     <PixelCanvas
       gap={10}
       speed={20}
-      colors={["#1A6FD4", "#5BB8FF", "#0A3878"]}
+      colors={["#18A0C0", "#72E5F8", "#0A5C72"]}
     />
     <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/0 group-hover:from-white/[0.03] group-hover:to-transparent transition-colors duration-500 pointer-events-none" />
 
     {/* Mobile-only subtle animated glow border since we removed the 3D artifacts from mobile */}
-    <div className="absolute inset-0 rounded-3xl border border-white/0 lg:border-none pointer-events-none" style={{ boxShadow: 'inset 0 0 20px rgba(91,184,255,0.1)' }} />
+    <div className="absolute inset-0 rounded-3xl border border-white/0 lg:border-none pointer-events-none" style={{ boxShadow: 'inset 0 0 20px rgba(114,229,248,0.1)' }} />
     <motion.div
       className="absolute inset-0 rounded-3xl pointer-events-none lg:hidden"
       animate={{ opacity: [0.3, 0.6, 0.3] }}
       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      style={{ boxShadow: 'inset 0 0 1px 1px rgba(91,184,255,0.2)' }}
+      style={{ boxShadow: 'inset 0 0 1px 1px rgba(114,229,248,0.2)' }}
     />
 
     <div className="relative z-10 w-full h-full flex flex-col justify-center items-center p-8 text-center">{children}</div>
@@ -111,13 +111,13 @@ export default function NewSection2() {
           animate={{ x: [0, 50, -50, 0], y: [0, -50, 50, 0], scale: [1, 1.1, 0.9, 1] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           className="absolute top-[-10%] left-[10%] w-[600px] h-[600px] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(26,111,212,0.15) 0%, rgba(26,111,212,0) 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(24,160,192,0.15) 0%, rgba(24,160,192,0) 70%)" }}
         />
         <motion.div
           animate={{ x: [0, -60, 60, 0], y: [0, 60, -60, 0], scale: [1, 0.8, 1.2, 1] }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           className="absolute bottom-[10%] right-[5%] w-[800px] h-[800px] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(91,184,255,0.1) 0%, rgba(91,184,255,0) 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(114,229,248,0.1) 0%, rgba(114,229,248,0) 70%)" }}
         />
       </div>
 
@@ -224,11 +224,11 @@ export default function NewSection2() {
               <div
                 className="text-4xl md:text-5xl font-extrabold mb-2 tracking-tight"
                 style={{
-                  background: "linear-gradient(135deg, #5BB8FF 0%, #ffffff 60%)",
+                  background: "linear-gradient(135deg, #72E5F8 0%, #ffffff 60%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
-                  filter: "drop-shadow(0 0 18px rgba(91,184,255,0.35))",
+                  filter: "drop-shadow(0 0 18px rgba(114,229,248,0.35))",
                 }}
               >
                 380+
@@ -254,13 +254,13 @@ export default function NewSection2() {
             <div
               className="absolute inset-0 rounded-[2rem] opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
               style={{
-                background: "linear-gradient(90deg, rgba(91,184,255,0) 0%, rgba(91,184,255,0.7) 50%, rgba(91,184,255,0) 100%)",
+                background: "linear-gradient(90deg, rgba(114,229,248,0) 0%, rgba(114,229,248,0.7) 50%, rgba(114,229,248,0) 100%)",
                 backgroundSize: "200% 100%",
                 animation: "shimmerBorder 3s linear infinite",
               }}
             />
             {/* Glow */}
-            <div className="absolute inset-0 rounded-[2rem] bg-[#5BB8FF] opacity-[0.06] blur-2xl pointer-events-none group-hover:opacity-[0.12] transition-opacity duration-700" />
+            <div className="absolute inset-0 rounded-[2rem] bg-[#72E5F8] opacity-[0.06] blur-2xl pointer-events-none group-hover:opacity-[0.12] transition-opacity duration-700" />
 
             {/* Frame */}
             <div className="relative rounded-[2rem] bg-[#010814]/90 p-3 md:p-5 border border-white/5">

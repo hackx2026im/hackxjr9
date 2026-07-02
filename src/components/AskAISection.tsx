@@ -62,7 +62,7 @@ function formatMessageText(text: string) {
               href={safeHref(urlVal)}
               target="_blank"
               rel="noopener noreferrer" 
-              className="text-[#5BB8FF] hover:underline font-medium"
+              className="text-[#72E5F8] hover:underline font-medium"
             >
               {textVal}
             </a>
@@ -230,13 +230,13 @@ export default function AskAISection() {
           animate={{ x: [0, 60, -60, 0], y: [0, 60, -60, 0], scale: [1, 1.2, 0.8, 1] }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           className="absolute top-[20%] right-[10%] w-[500px] h-[500px] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(26,111,212,0.12) 0%, rgba(26,111,212,0) 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(24,160,192,0.12) 0%, rgba(24,160,192,0) 70%)" }}
         />
         <motion.div
           animate={{ x: [0, -40, 40, 0], y: [0, -40, 40, 0], scale: [1, 0.9, 1.1, 1] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           className="absolute bottom-[20%] left-[10%] w-[400px] h-[400px] rounded-full"
-          style={{ background: "radial-gradient(circle, rgba(91,184,255,0.10) 0%, rgba(91,184,255,0) 70%)" }}
+          style={{ background: "radial-gradient(circle, rgba(114,229,248,0.10) 0%, rgba(114,229,248,0) 70%)" }}
         />
       </div>
 
@@ -294,7 +294,7 @@ export default function AskAISection() {
                       className={`max-w-[85%] px-5 py-4 rounded-2xl ${
                         isUser 
                           ? "rounded-tr-none bg-white/10 backdrop-blur-md text-white border border-white/5" 
-                          : "rounded-tl-none bg-[#1A6FD4]/10 backdrop-blur-md border border-[#5BB8FF]/20 text-white/90 shadow-[0_0_20px_rgba(26,111,212,0.15)]"
+                          : "rounded-tl-none bg-[#18A0C0]/10 backdrop-blur-md border border-[#72E5F8]/20 text-white/90 shadow-[0_0_20px_rgba(24,160,192,0.15)]"
                       } text-sm font-light leading-relaxed`}
                     >
                       {formatMessageText(msg.text)}
@@ -315,7 +315,7 @@ export default function AskAISection() {
                               type="button"
                               key={item}
                               onClick={() => handleMenuClick(item)}
-                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 hover:bg-[#1A6FD4]/20 hover:border-[#5BB8FF]/30 text-white/70 hover:text-white text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap"
+                              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 hover:bg-[#18A0C0]/20 hover:border-[#72E5F8]/30 text-white/70 hover:text-white text-[11px] font-medium transition-all cursor-pointer whitespace-nowrap"
                             >
                               <span>{item}</span>
                             </button>
@@ -326,7 +326,7 @@ export default function AskAISection() {
                       {/* Debug badge indicator */}
                       {debugActive && msg.tier !== undefined && (
                         <div className="mt-2.5 flex items-center">
-                          <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[#5BB8FF] font-bold text-[9px] tracking-wider uppercase">
+                          <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[#72E5F8] font-bold text-[9px] tracking-wider uppercase">
                             ⚡ {msg.tier === 6 && msg.source === "retrieved_chunks" ? "FALLBACK" : (tierLabels[msg.tier] || "SYSTEM")}
                           </span>
                         </div>
@@ -338,10 +338,10 @@ export default function AskAISection() {
 
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="max-w-[85%] px-5 py-4 rounded-2xl rounded-tl-none bg-[#1A6FD4]/10 backdrop-blur-md border border-[#5BB8FF]/20 text-white/90 text-sm font-light leading-relaxed shadow-[0_0_20px_rgba(26,111,212,0.1)] flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#5BB8FF] animate-bounce" style={{ animationDelay: "0ms" }} />
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#5BB8FF] animate-bounce" style={{ animationDelay: "150ms" }} />
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#5BB8FF] animate-bounce" style={{ animationDelay: "300ms" }} />
+                  <div className="max-w-[85%] px-5 py-4 rounded-2xl rounded-tl-none bg-[#18A0C0]/10 backdrop-blur-md border border-[#72E5F8]/20 text-white/90 text-sm font-light leading-relaxed shadow-[0_0_20px_rgba(24,160,192,0.1)] flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#72E5F8] animate-bounce" style={{ animationDelay: "0ms" }} />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#72E5F8] animate-bounce" style={{ animationDelay: "150ms" }} />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#72E5F8] animate-bounce" style={{ animationDelay: "300ms" }} />
                   </div>
                 </div>
               )}
@@ -351,7 +351,7 @@ export default function AskAISection() {
 
             {/* Input Area */}
             <form onSubmit={handleSubmit} className="p-4 bg-white/[0.02] border-t border-white/5">
-              <div className="relative flex items-center bg-black/40 border border-white/10 rounded-full px-4 py-2 focus-within:border-[#5BB8FF]/50 focus-within:bg-[#041A3A]/40 transition-colors">
+              <div className="relative flex items-center bg-black/40 border border-white/10 rounded-full px-4 py-2 focus-within:border-[#72E5F8]/50 focus-within:bg-[#041A3A]/40 transition-colors">
                 <input 
                   type="text" 
                   value={inputValue}
@@ -363,7 +363,7 @@ export default function AskAISection() {
                 <button 
                   type="submit"
                   disabled={isLoading}
-                  className="w-10 h-10 rounded-full bg-gradient-to-r from-[#1A6FD4] to-[#5BB8FF] flex items-center justify-center hover:opacity-90 transition-opacity shrink-0 disabled:opacity-50"
+                  className="w-10 h-10 rounded-full bg-gradient-to-r from-[#18A0C0] to-[#72E5F8] flex items-center justify-center hover:opacity-90 transition-opacity shrink-0 disabled:opacity-50"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M5 12h14M12 5l7 7-7 7"/>

@@ -38,7 +38,7 @@ export default function UnderwaterEffect() {
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
       
       {/* ── Background Deep Water Overlay ── */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#010814]/10 via-[#0A3878]/10 to-[#010814]/80 z-10 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#010814]/10 via-[#0A5C72]/10 to-[#010814]/80 z-10 mix-blend-multiply" />
 
       {/* Removed heavy SVG feTurbulence caustic effect to massively improve scroll performance */}
 
@@ -52,7 +52,7 @@ export default function UnderwaterEffect() {
               left: `${ray.left}%`,
               width: `${ray.width}px`,
               height: `${ray.height}vh`,
-              background: "linear-gradient(180deg, rgba(91,184,255,0.15) 0%, rgba(91,184,255,0.02) 60%, transparent 100%)",
+              background: "linear-gradient(180deg, rgba(114,229,248,0.15) 0%, rgba(114,229,248,0.02) 60%, transparent 100%)",
               rotate: ray.rotation,
               willChange: "transform, opacity",
             }}

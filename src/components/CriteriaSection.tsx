@@ -8,19 +8,19 @@ const criteria = [
     title: "Go Solo or Build a Team",
     desc: "You can participate as a solo innovator or form a team of up to 5 members. All team members must be currently enrolled students from the same school, encouraging collaboration within your own learning environment.",
     imageUrl: "/criteria-images/icon-1.webp",
-    color: "#5BB8FF",
+    color: "#72E5F8",
   },
   {
     title: "Your Idea",
     desc: "We welcome ideas that solve real-world problems through innovative, technology-driven solutions. From smart environments and green tech to digital education, healthcare, community well-being, or everyday life hacks—if it uses technology to make an impact, it belongs here.",
     imageUrl: "/criteria-images/icon-2.webp",
-    color: "#1A6FD4",
+    color: "#18A0C0",
   },
   {
     title: "Start Your Journey",
     desc: "Participation is completely free, with no registration fee or complex prerequisites. All you need is your idea, your creativity, and your drive. Simply sign up and submit your initial innovation proposal, and let your creativity take center stage.",
     imageUrl: "/criteria-images/icon-3.webp",
-    color: "#5BB8FF",
+    color: "#72E5F8",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function CriteriaSection() {
       
       {/* Background Ambient - Optimized */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full" style={{ background: "radial-gradient(ellipse, rgba(91,184,255,0.08) 0%, rgba(91,184,255,0) 70%)" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full" style={{ background: "radial-gradient(ellipse, rgba(114,229,248,0.08) 0%, rgba(114,229,248,0) 70%)" }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 relative z-10">
@@ -105,7 +105,7 @@ export default function CriteriaSection() {
                   <div 
                     className="absolute w-[200%] h-[200%] aspect-square left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_4.5s_linear_infinite] pointer-events-none"
                     style={{
-                      background: `conic-gradient(from 0deg, transparent 0 260deg, #0A3878 290deg, #1A6FD4 320deg, #5BB8FF 345deg, #ffffff 355deg, transparent 360deg)`,
+                      background: `conic-gradient(from 0deg, transparent 0 260deg, #0A5C72 290deg, #18A0C0 320deg, #72E5F8 345deg, #ffffff 355deg, transparent 360deg)`,
                     }}
                   />
                 </div>

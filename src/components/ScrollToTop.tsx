@@ -59,7 +59,7 @@ export default function ScrollToTop() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.5, y: 20 }}
           transition={{ duration: 0.3, type: "spring", stiffness: 260, damping: 20 }}
-          className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex items-center justify-center rounded-full bg-[#010814]/80 backdrop-blur-md shadow-2xl shadow-[#5BB8FF]/20 group border border-white/10 hover:bg-[#1A6FD4]/20 transition-colors"
+          className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex items-center justify-center rounded-full bg-[#010814]/80 backdrop-blur-md shadow-2xl shadow-[#72E5F8]/20 group border border-white/10 hover:bg-[#18A0C0]/20 transition-colors"
           style={{ width: size, height: size }}
           aria-label="Scroll to top"
         >
@@ -82,7 +82,7 @@ export default function ScrollToTop() {
             />
             {/* Progress Stroke */}
             <circle
-              className="text-[#5BB8FF] transition-all duration-150 ease-out"
+              className="text-[#72E5F8] transition-all duration-150 ease-out"
               strokeWidth={strokeWidth}
               strokeDasharray={circumference}
               strokeDashoffset={strokeDashoffset}
