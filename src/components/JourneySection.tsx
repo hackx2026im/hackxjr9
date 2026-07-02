@@ -69,18 +69,20 @@ const LINE_Y = 140; // world-vh
 const LINE_L = 50;  // vw start — the mountain's centre. Line sits BEHIND the mountain
                     // (zIndex 1 < mountain zIndex 20) and emerges from behind it as the
                     // camera pans right.
-const LINE_W = 180; // vw width (50 → 230vw, the center of Image 3 / Grand Finals)
+const LINE_W = 230; // vw width (50 → 280vw, the center of Image 3 / Grand Finals)
 
-// 5 stages. Grand Finals is pushed further out to give it epic isolation and room for the end image.
-const SX = [90, 115, 140, 165, 230]; // vw positions
+// 7 stages. Regular nodes keep the original 25vw interval; Grand Finals is pushed
+// out by the same 65vw isolation gap as before to give it epic isolation and room
+// for the end image.
+const SX = [90, 115, 140, 165, 190, 215, 280]; // vw positions
 
-// Camera pan stops so Grand Finals (230vw) is perfectly centered (230 - 50 = 180)
-const CAM_END = -180; // vw
+// Camera pan stops so Grand Finals (280vw) is perfectly centered (280 - 50 = 230)
+const CAM_END = -230; // vw
 
 // Independent images to allow exact placement
 const timelineImages = [
   { num: 2, left: 105, width: 60 },
-  { num: 3, left: 160, width: 140 }, // Center of this image is 230vw (Exactly GF!), ends at 300vw
+  { num: 3, left: 210, width: 140 }, // Center of this image is 280vw (Exactly GF!), ends at 350vw
 ];
 
 // ── Subtle previous-year backdrops ──
@@ -95,8 +97,8 @@ const timelineBgs = [
   "/timeline-bgs/Semi%20FInals.webp",
   "/timeline-bgs/Finals.webp",
 ];
-const BG_CX_DESKTOP = [90, 115, 140, 165, 200]; // world-vw centres (before the end image at 160+)
-const BG_CX_MOBILE  = [160, 225, 290, 355, 400];
+const BG_CX_DESKTOP = [90, 138, 185, 233, 280]; // world-vw centres spread across the 7-stage span
+const BG_CX_MOBILE  = [160, 268, 375, 483, 590];
 
 function TimelineBackdrops({ cx, width = 42 }: { cx: number[]; width?: number }) {
   return (
@@ -139,29 +141,39 @@ const BRAND2 = "#1A6FD4";
 
 const STAGES = [
   {
-    date: "July 1",
+    date: "July 3",
     title: "Registrations Open",
-    desc: "Create your team and secure your place in Sri Lanka's premier inter-university startup challenge.",
+    desc: "Welcome to the official launch, where schools and solo inventors nationwide can secure their place in Sri Lanka's premier innovation challenge.",
   },
   {
     date: "July 31",
-    title: "Proposal Submission",
-    desc: "Present your concept through a proposal and introductory video showcasing your problem and solution.",
+    title: "Awareness Session",
+    desc: "Welcome to our introductory briefing, where we guide students and teachers through the challenge framework and winning strategies.",
   },
   {
-    date: "Sep – Oct",
-    title: "designX Workshops",
-    desc: "Refine your model and gain insights through expert-led startup development workshops.",
+    date: "July 31",
+    title: "Proposal Submission Window",
+    desc: "Welcome to the conceptual launchpad, where teams officially lock in their tech-driven solutions before the final gates close on August 14th.",
+  },
+  {
+    date: "August 26",
+    title: "Online Workshop Series 1",
+    desc: "Welcome to your foundational training, featuring three vital digital masterclasses on August 26th, September 2nd, and September 12th to jumpstart your innovation build.",
   },
   {
     date: "October 3",
-    title: "ideaX: Semi-Finals",
-    desc: "Pitch before an expert judging panel and compete for a place among the nation's top startup teams.",
+    title: "InnoX: Semi-Finals",
+    desc: "Welcome to the InnoX arena, where the sharpest young minds unite to pitch their initial concepts and vie for a spot in the finals.",
+  },
+  {
+    date: "October 13",
+    title: "Online Workshop Series 2",
+    desc: "Welcome to the advanced mentoring phase, offering elite coaching sessions on October 13th, 18th, and 25th to polish your prototype and public speaking skills.",
   },
   {
     date: "November 11",
     title: "Grand Finals",
-    desc: "Take the national stage before industry leaders, investors, and distinguished guests.",
+    desc: "Welcome to the grandest stage of all, where our national finalists pitch live to claim the ultimate title of Sri Lanka's top junior innovators.",
     isGF: true,
   },
 ];
@@ -197,14 +209,18 @@ function DesktopJourneySection() {
   const op2 = useTransform(panVal, [100 - SX[2], 60 - SX[2]], [0, 1]);
   const op3 = useTransform(panVal, [100 - SX[3], 60 - SX[3]], [0, 1]);
   const op4 = useTransform(panVal, [100 - SX[4], 60 - SX[4]], [0, 1]);
-  const nodeOps = [op0, op1, op2, op3, op4];
+  const op5 = useTransform(panVal, [100 - SX[5], 60 - SX[5]], [0, 1]);
+  const op6 = useTransform(panVal, [100 - SX[6], 60 - SX[6]], [0, 1]);
+  const nodeOps = [op0, op1, op2, op3, op4, op5, op6];
 
   const y0 = useTransform(panVal, [100 - SX[0], 60 - SX[0]], [30, 0]);
   const y1 = useTransform(panVal, [100 - SX[1], 60 - SX[1]], [30, 0]);
   const y2 = useTransform(panVal, [100 - SX[2], 60 - SX[2]], [30, 0]);
   const y3 = useTransform(panVal, [100 - SX[3], 60 - SX[3]], [30, 0]);
   const y4 = useTransform(panVal, [100 - SX[4], 60 - SX[4]], [30, 0]);
-  const nodeYs = [y0, y1, y2, y3, y4];
+  const y5 = useTransform(panVal, [100 - SX[5], 60 - SX[5]], [30, 0]);
+  const y6 = useTransform(panVal, [100 - SX[6], 60 - SX[6]], [30, 0]);
+  const nodeYs = [y0, y1, y2, y3, y4, y5, y6];
 
   // Exit fade from bottom (Phase 3)
   const exitFadeOp = useTransform(p, [0.85, 1.0], [0, 1]);
@@ -227,7 +243,7 @@ function DesktopJourneySection() {
 
   return (
     <section id="timeline" className="bg-[#010814] w-full relative">
-      <div ref={containerRef} style={{ height: "900vh" }}>
+      <div ref={containerRef} style={{ height: "1150vh" }}>
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           {/* Top screen feathering to guarantee no harsh lines against the previous section */}
           <div className="absolute top-0 left-0 w-full h-[15vh] z-[100] pointer-events-none" style={{ background: "linear-gradient(to bottom, #010814 0%, transparent 100%)" }} />
@@ -266,7 +282,7 @@ function DesktopJourneySection() {
             <motion.div
               className="absolute pointer-events-none select-none flex justify-center items-center"
               style={{
-                left: "230vw", // Center of Image 3 and GF
+                left: "280vw", // Center of Image 3 and GF
                 top: "115vh", // Shifted down 40vh to match new world scale
                 transform: "translate(-50%, -50%)",
                 opacity: novOp,
@@ -545,9 +561,9 @@ function DesktopJourneySection() {
 //  First node pushed out to 170vw so there's clear EMPTY GROUND after the
 //  mountain exits (~panVal -66) before the first text arrives.
 // ─────────────────────────────────────────────────────────
-const SX_M       = [160, 225, 290, 355, 460];  // vw positions, pushed GF out to 460 to clear Semi-Finals
-const CAM_END_M  = -410;                         // -(460 - 50)
-const LINE_W_M   = 410;  // 50 → 460vw (Grand Finals). Begins behind the mountain centre.
+const SX_M       = [160, 225, 290, 355, 420, 485, 590];  // vw positions; regular nodes keep the 65vw interval, GF pushed out by the same 105vw isolation gap
+const CAM_END_M  = -540;                         // -(590 - 50)
+const LINE_W_M   = 540;  // 50 → 590vw (Grand Finals). Begins behind the mountain centre.
                          // node0 at 160vw slides in from the right just as the mountain
                          // exits (~panVal -76) — timeline starts with minimal empty ground.
 
@@ -605,7 +621,7 @@ function MobileJourneySection() {
   // through the viewport as the world pans, like a parallax sidescroller. Their soft edge
   // masks blend them in as they enter, so no zoom or opacity animation is needed.
 
-  // NOV 11 counter anchored to GF position (430vw)
+  // NOV 11 counter anchored to GF position (590vw)
   const counterVal = useTransform(p, [0.69, 0.86], [1, 11]);
   const [date, setDate] = useState(1);
   useMotionValueEvent(counterVal, "change", (v) => setDate(Math.round(v)));
@@ -617,14 +633,18 @@ function MobileJourneySection() {
   const op2 = useTransform(panVal, [100 - SX_M[2], 60 - SX_M[2]], [0, 1]);
   const op3 = useTransform(panVal, [100 - SX_M[3], 60 - SX_M[3]], [0, 1]);
   const op4 = useTransform(panVal, [100 - SX_M[4], 60 - SX_M[4]], [0, 1]);
-  const nodeOps = [op0, op1, op2, op3, op4];
+  const op5 = useTransform(panVal, [100 - SX_M[5], 60 - SX_M[5]], [0, 1]);
+  const op6 = useTransform(panVal, [100 - SX_M[6], 60 - SX_M[6]], [0, 1]);
+  const nodeOps = [op0, op1, op2, op3, op4, op5, op6];
 
   const y0 = useTransform(panVal, [100 - SX_M[0], 60 - SX_M[0]], [30, 0]);
   const y1 = useTransform(panVal, [100 - SX_M[1], 60 - SX_M[1]], [30, 0]);
   const y2 = useTransform(panVal, [100 - SX_M[2], 60 - SX_M[2]], [30, 0]);
   const y3 = useTransform(panVal, [100 - SX_M[3], 60 - SX_M[3]], [30, 0]);
   const y4 = useTransform(panVal, [100 - SX_M[4], 60 - SX_M[4]], [30, 0]);
-  const nodeYs = [y0, y1, y2, y3, y4];
+  const y5 = useTransform(panVal, [100 - SX_M[5], 60 - SX_M[5]], [30, 0]);
+  const y6 = useTransform(panVal, [100 - SX_M[6], 60 - SX_M[6]], [30, 0]);
+  const nodeYs = [y0, y1, y2, y3, y4, y5, y6];
 
   const exitFadeOp = useTransform(p, [0.87, 1.0], [0, 1]);
 
@@ -645,8 +665,8 @@ function MobileJourneySection() {
 
   return (
     <section id="timeline" className="bg-[#010814] w-full relative">
-      {/* 500vh — faster scroll so timeline is traversed without excessive swiping */}
-      <div ref={containerRef} style={{ height: "500vh" }}>
+      {/* 660vh — scaled from 500vh to match the longer 7-stage pan, keeping the same pan speed */}
+      <div ref={containerRef} style={{ height: "660vh" }}>
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[15vh] z-[100] pointer-events-none"
             style={{ background: "linear-gradient(to bottom, #010814 0%, transparent 100%)" }} />
@@ -676,11 +696,11 @@ function MobileJourneySection() {
             className="absolute top-0 left-0"
             style={{ width: `${LINE_L + LINE_W_M + 120}vw`, height: "200vh", x: worldX, y: worldY }}
           >
-            {/* NOV watermark anchored to GF at 430vw */}
+            {/* NOV watermark anchored to GF (final stage) */}
             <motion.div
               className="absolute pointer-events-none select-none flex justify-center items-center"
               style={{
-                left: `${SX_M[4]}vw`,
+                left: `${SX_M[6]}vw`,
                 top: "115vh",
                 transform: "translate(-50%, -50%)",
                 opacity: novOp,
@@ -774,11 +794,11 @@ function MobileJourneySection() {
               </div>
             ))}
 
-            {/* img3 (Grand Finals) — STATIC, centered on the GF node at 460vw.
-                left=385vw, width=150vw → center=460vw. Slides in from the right like a
+            {/* img3 (Grand Finals) — STATIC, centered on the GF node at 590vw.
+                left=515vw, width=150vw → center=590vw. Slides in from the right like a
                 sidescroller; objectFit=cover fills the narrow mobile viewport. */}
             <div className="absolute pointer-events-none" style={{
-              left: "385vw",
+              left: "515vw",
               top: "96vh",        // pushed down ~10vh; rides the world on the shared ground
               height: "110vh",
               width: "150vw",
@@ -793,7 +813,7 @@ function MobileJourneySection() {
             </div>
 
             {/* Gradient floor — the shared ground; images dissolve into the bottom plain */}
-            <div className="absolute" style={{ left: 0, top: "178vh", width: "500vw", height: "62vh", background: "linear-gradient(to bottom, transparent 0%, #010814 28%, #010814 100%)", zIndex: 4 }} />
+            <div className="absolute" style={{ left: 0, top: "178vh", width: "700vw", height: "62vh", background: "linear-gradient(to bottom, transparent 0%, #010814 28%, #010814 100%)", zIndex: 4 }} />
 
             {/* Timeline line */}
             <div className="absolute" style={{
