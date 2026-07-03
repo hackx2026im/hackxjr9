@@ -249,7 +249,7 @@ export default function AskAISection() {
           className="text-center mb-10 md:mb-12"
         >
 
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight uppercase">Ask Mascot Anything</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight uppercase">ASK AI ANYTHING</h2>
           <p className="text-lg text-white/60 font-light max-w-2xl mx-auto text-center">
             Chat with our AI Assistant to get instant answers about hackX Jr. 9.0
           </p>
@@ -271,7 +271,7 @@ export default function AskAISection() {
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-white/[0.02]">
               <div className="flex items-center gap-3">
                 <SiriOrb size={34} />
-                <span className="text-sm font-semibold text-white tracking-wide">Mascot</span>
+                <span className="text-sm font-semibold text-white tracking-wide">AI Assistant</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-full bg-white/10" />
