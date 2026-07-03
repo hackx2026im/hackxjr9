@@ -151,7 +151,7 @@ const STAGES = [
     desc: "An introductory session for students and teachers covering the competition, timeline, and what it takes to succeed.",
   },
   {
-    date: "August 1",
+    date: "Aug 1",
     title: "Proposal Submission",
     desc: "Teams submit their innovative ideas and proposed solutions before the proposal submission deadline.",
   },
@@ -173,6 +173,7 @@ const STAGES = [
   {
     date: "November 11",
     title: "Grand Finals",
+    titleGradient: "linear-gradient(135deg, #D4AF37 0%, #FFF3A0 60%)",
     desc: "The nation's top finalists present their innovations on the national stage and compete for the championship title.",
     isGF: true,
   },
@@ -305,7 +306,7 @@ function DesktopJourneySection() {
               className="absolute w-[100vw] flex flex-col items-center text-center px-10"
               style={{ left: 0, top: "12vh", y: introY, opacity: textOp, zIndex: 10 }}
             >
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white uppercase" style={{
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight title-gradient uppercase" style={{
                 lineHeight: 1.1,
               }}>
                 Your Journey
@@ -464,9 +465,14 @@ function DesktopJourneySection() {
                     <div className="font-extrabold tracking-tight text-white" style={{
                       fontSize: isGF ? "clamp(1.5rem, 2vw, 2rem)" : "clamp(1.1rem, 1.4vw, 1.5rem)",
                       lineHeight: 1.15, marginBottom: "0.4rem",
-                      textShadow: isGF
-                        ? `0 0 30px rgba(114,229,248,0.6), 0 4px 20px rgba(0,0,0,0.9)`
-                        : `0 4px 15px rgba(0,0,0,0.9)`,
+                      ...(isGF ? {
+                        background: "linear-gradient(135deg, #D4AF37 0%, #FFF3A0 50%, #AA8825 100%)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        textShadow: "0 4px 20px rgba(0,0,0,0.9)",
+                      } : {
+                        textShadow: `0 4px 15px rgba(0,0,0,0.9)`,
+                      }),
                     }}>
                       {stage.title}
                     </div>
@@ -723,7 +729,7 @@ function MobileJourneySection() {
               className="absolute w-[100vw] flex flex-col items-center text-center px-8"
               style={{ left: 0, top: "12vh", x: introX, y: introY, opacity: textOp, zIndex: 10 }}
             >
-              <h2 className="text-4xl font-extrabold tracking-tight text-white uppercase" style={{ lineHeight: 1.1 }}>
+              <h2 className="text-4xl font-extrabold tracking-tight title-gradient uppercase" style={{ lineHeight: 1.1 }}>
                 Your Journey
               </h2>
               <p className="font-light" style={{
@@ -873,9 +879,14 @@ function MobileJourneySection() {
                     <div className="font-extrabold tracking-tight text-white" style={{
                       fontSize: isGF ? "clamp(1rem, 4.5vw, 1.4rem)" : "clamp(0.85rem, 3.8vw, 1.2rem)",
                       lineHeight: 1.15, marginBottom: "0.35rem",
-                      textShadow: isGF
-                        ? "0 0 30px rgba(114,229,248,0.6), 0 4px 20px rgba(0,0,0,0.9)"
-                        : "0 4px 15px rgba(0,0,0,0.9)",
+                      ...(isGF ? {
+                          background: "linear-gradient(135deg, #D4AF37 0%, #FFF3A0 50%, #AA8825 100%)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                          textShadow: "0 4px 20px rgba(0,0,0,0.9)",
+                        } : {
+                          textShadow: "0 4px 15px rgba(0,0,0,0.9)",
+                        }),
                     }}>
                       {stage.title}
                     </div>

@@ -98,10 +98,6 @@
   }
 
   html {
-    /* Reserve the scrollbar gutter on both sides so left and right page
-       margins stay symmetric (no content shift from the scrollbar). */
-    scrollbar-gutter: stable both-edges;
-    
     /* Base font size for mobile */
     font-size: 16px; 
   }
@@ -135,6 +131,13 @@
   h1, h2, h3, h4 {
     font-family: 'TT Hoves Pro Expanded', 'TT Hoves Pro', system-ui, sans-serif;
     font-weight: 700; /* Bold */
+  }
+
+  .title-gradient {
+    background: linear-gradient(to bottom, #ffffff 30%, #052E3F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 

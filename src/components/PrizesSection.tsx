@@ -17,10 +17,10 @@ const prizes = [
     label: "Champions",
     amount: "LKR 150,000",
     tagline: "Cash Prize",
-    accent: "#FFD700",
-    glow: "rgba(255,215,0,0.18)",
+    accent: "#D4AF37",
+    glow: "rgba(212,175,55,0.18)",
     imageUrl: "/winner-cards/1.webp",
-    pixelColors: ["#FFD700", "#FFF3A0", "#D4A800", "#FFEA50"],
+    pixelColors: ["#D4AF37", "#E6C27A", "#AA8825", "#F3D88D"],
     size: "large",
   },
   {
@@ -79,9 +79,9 @@ export default function PrizesSection() {
         <div className="text-center mb-12 md:mb-16">
           <motion.h2
             {...fade(0.08)}
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.05] mb-6 uppercase"
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold title-gradient tracking-tight leading-[1.05] mb-6"
           >
-            hackX Jr.9.0 Awards
+            hackX Jr. 9.0 AWARDS
           </motion.h2>
           <motion.p {...fade(0.16)} className="text-lg text-white/50 font-light max-w-xl mx-auto leading-relaxed text-center">
             The summit of your innovation journey. Hard work, late-night brainstorming, and endless creativity culminate right here on the national stage.
@@ -146,7 +146,7 @@ export default function PrizesSection() {
                       <motion.div
                         animate={{ y: [0, -8, 0] }}
                         transition={{ duration: 3 + visualIdx, repeat: Infinity, ease: "easeInOut" }}
-                        className="mb-6 relative mx-auto md:mx-0"
+                        className="mb-6 relative mx-auto "
                         style={{
                           width: isFirst ? 108 : 86,
                           height: isFirst ? 108 : 86,
@@ -180,7 +180,7 @@ export default function PrizesSection() {
 
                       {/* Rank */}
                       <div
-                        className="font-extrabold tracking-tight mb-2 leading-none text-center md:text-left"
+                        className="font-extrabold tracking-tight mb-2 leading-none text-center "
                         style={{
                           fontSize: isFirst ? "3.5rem" : "2.75rem",
                           background: `linear-gradient(135deg, ${prize.accent} 0%, rgba(255,255,255,0.75) 100%)`,
@@ -193,9 +193,9 @@ export default function PrizesSection() {
                         {prize.rank}
                       </div>
 
-                      <p className="text-white font-bold text-lg mb-3 tracking-tight text-center md:text-left">{prize.label}</p>
+                      <p className="text-white font-bold text-lg mb-3 tracking-tight text-center ">{prize.label}</p>
                       
-                      <div className="text-center md:text-left flex flex-col gap-1 mb-6">
+                      <div className="text-center  flex flex-col gap-1 mb-6">
                         <motion.span 
                           animate={{ 
                             textShadow: [
@@ -219,9 +219,9 @@ export default function PrizesSection() {
                       </div>
                     </div>
 
-                    <div className="border-t border-white/5 pt-4 text-center md:text-left relative z-20">
+                    <div className="border-t border-white/5 pt-4 text-center  relative z-20">
                       <span className="text-[10px] text-white/30 tracking-widest font-semibold">
-                        GRAND FINALS · hackX Jr.9.0
+                        GRAND FINALS · hackX Jr. 9.0
                       </span>
                     </div>
 

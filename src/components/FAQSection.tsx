@@ -68,7 +68,7 @@ export default function FAQSection() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center w-full mb-12 relative z-20 text-center"
         >
-          <h2 className="text-4xl md:text-5xl xl:text-6xl font-extrabold text-white tracking-tight uppercase">
+          <h2 className="text-4xl md:text-5xl xl:text-6xl font-extrabold title-gradient tracking-tight uppercase">
             Frequently Asked Questions
           </h2>
         </motion.div>

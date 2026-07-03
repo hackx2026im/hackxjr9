@@ -99,7 +99,7 @@ export default function NavBar() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center group relative z-50">
-            <div className="relative w-[100px] sm:w-[120px] h-[32px] sm:h-[36px]">
+            <div className="relative w-[130px] sm:w-[155px] h-[42px] sm:h-[50px]">
               <Image
                 src="/hackX Jr 9.0 logo.webp"
                 alt="hackX Jr. Logo"

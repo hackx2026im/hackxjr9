@@ -82,7 +82,7 @@ export default function CriteriaSection() {
           viewport={{ once: true }}
           className="text-center mb-8 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight uppercase">
+          <h2 className="text-4xl md:text-5xl font-extrabold title-gradient mb-6 tracking-tight uppercase">
             Who Can Compete
           </h2>
         </motion.div>

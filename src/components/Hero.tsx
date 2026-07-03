@@ -61,10 +61,10 @@ export default function Hero() {
         overflow: "hidden",
       }}>
         <motion.div
-          initial={{ scale: 0.92, opacity: 0 }}
-          animate={{ scale: 1,   opacity: 1 }}
+          initial={{ scale: 0.92, opacity: 0, x: "-50%" }}
+          animate={{ scale: 1,   opacity: 1, x: "-50%" }}
           transition={{ duration: 2.8, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[140vw] md:w-full"
+          className="absolute inset-y-0 left-1/2 w-[140vw] md:w-full"
           style={{ transformOrigin: "center center" }}
         >
           <Image
