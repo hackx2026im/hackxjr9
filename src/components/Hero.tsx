@@ -158,15 +158,15 @@ export default function Hero() {
       {/* ── z-50: Hero Foreground ── */}
       <HeroForeground scrollProgress={heroProg} />
 
-      {/* ── Bottom fade overlay to fade the Hero Foreground into the dark background ── */}
+      {/* 🏔️ Bottom fade overlay to fade the Hero Foreground into the dark background 🏔️ */}
       <div style={{
         position: "absolute",
         left: 0,
         right: 0,
-        bottom: "-2px",
-        height: "clamp(180px, 35vh, 380px)",
+        bottom: "-20px",
+        height: "clamp(250px, 45vh, 500px)",
         zIndex: 51,
-        background: "linear-gradient(to bottom, transparent 0%, rgba(1, 14, 19, 0.15) 20%, rgba(1, 14, 19, 0.6) 60%, rgba(1, 14, 19, 0.9) 85%, #010E13 100%)",
+        background: "linear-gradient(to bottom, transparent 0%, rgba(1, 14, 19, 0.1) 15%, rgba(1, 14, 19, 0.7) 50%, rgba(1, 14, 19, 0.95) 80%, #010E13 100%)",
         pointerEvents: "none",
       }} />
 
