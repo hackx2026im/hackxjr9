@@ -74,7 +74,7 @@ const LINE_W = 230; // vw width (50 → 280vw, the center of Image 3 / Grand Fin
 // 7 stages. Regular nodes keep the original 25vw interval; Grand Finals is pushed
 // out by the same 65vw isolation gap as before to give it epic isolation and room
 // for the end image.
-const SX = [90, 115, 140, 165, 190, 215, 280]; // vw positions
+const SX = [90, 118, 140, 165, 190, 215, 280]; // vw positions
 
 // Camera pan stops so Grand Finals (280vw) is perfectly centered (280 - 50 = 230)
 const CAM_END = -230; // vw
@@ -561,7 +561,7 @@ function DesktopJourneySection() {
 //  First node pushed out to 170vw so there's clear EMPTY GROUND after the
 //  mountain exits (~panVal -66) before the first text arrives.
 // ─────────────────────────────────────────────────────────
-const SX_M = [160, 225, 290, 355, 420, 485, 590];  // vw positions; regular nodes keep the 65vw interval, GF pushed out by the same 105vw isolation gap
+const SX_M = [160, 230, 290, 355, 420, 485, 590];  // vw positions; regular nodes keep the 65vw interval, GF pushed out by the same 105vw isolation gap
 const CAM_END_M = -540;                         // -(590 - 50)
 const LINE_W_M = 540;  // 50 → 590vw (Grand Finals). Begins behind the mountain centre.
 // node0 at 160vw slides in from the right just as the mountain
