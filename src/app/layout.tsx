@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   keywords: [
     "hackX Jr",
-    "hackX Jr.9.0",
+    "hackX Jr. 9.0",
     "innovation competition",
     "Sri Lanka",
     "inter-school",
@@ -23,17 +23,28 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/Xlogo-favicon.png",
+    shortcut: "/Xlogo-favicon.png",
+    apple: "/Xlogo-favicon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   openGraph: {
     type: "website",
     url: SITE_URL,
-    siteName: "hackX Jr.9.0",
+    siteName: "hackX Jr. 9.0",
     title: TITLE,
     description: DESCRIPTION,
     locale: "en_US",
     images: [
       {
         url: "/hackX Jr 9.0 logo.webp",
-        alt: "hackX Jr.9.0",
+        width: 1200,
+        height: 630,
+        alt: "hackX Jr. 9.0 Logo",
       },
     ],
   },
