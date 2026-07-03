@@ -14,9 +14,9 @@ const memories = [
     description: "Kicking off a day of innovation"
   },
   {
-    src: "/Memories/Networking%20Moments.webp",
-    title: "Networking Moments",
-    description: "Building connections beyond the competition"
+    src: "/Memories/Team%20Awards.webp",
+    title: "Celebrating Excellence",
+    description: "Honouring dedication and excellence"
   },
   {
     src: "/Memories/Focused%20Audience.webp",
@@ -39,9 +39,9 @@ const memories = [
     description: "Celebrating innovation and outstanding achievement"
   },
   {
-    src: "/Memories/Official%20Merch.webp",
-    title: "Official Merchandise",
-    description: "A memory to wear beyond the event"
+    src: "/Memories/Presenting%20Teams.webp",
+    title: "Team Presentations",
+    description: "Innovators pitching their solutions with confidence"
   },
   {
     src: "/Memories/The%20Team.webp",
