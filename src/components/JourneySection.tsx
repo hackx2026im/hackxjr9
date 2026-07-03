@@ -143,37 +143,37 @@ const STAGES = [
   {
     date: "July 3",
     title: "Registrations Open",
-    desc: "Welcome to the official launch, where schools and solo inventors nationwide can secure their place in Sri Lanka's premier innovation challenge.",
+    desc: "Registration begins for schools and young innovators to embark on their journey in Sri Lanka's premier inter-school innovation competition.",
   },
   {
     date: "July 31",
     title: "Awareness Session",
-    desc: "Welcome to our introductory briefing, where we guide students and teachers through the challenge framework and winning strategies.",
+    desc: "An introductory session for students and teachers covering the competition, timeline, and what it takes to succeed.",
   },
   {
     date: "August 1",
     title: "Proposal Submission",
-    desc: "Welcome to the conceptual launchpad, where teams officially lock in their tech-driven solutions before the final gates close on August 14th.",
+    desc: "Teams submit their innovative ideas and proposed solutions before the proposal submission deadline.",
   },
   {
     date: "August 26",
     title: "Online Workshop Series 1",
-    desc: "Welcome to your foundational training, featuring three vital digital masterclasses on August 26th, September 2nd, and September 12th to jumpstart your innovation build.",
+    desc: "A series of expert-led workshops designed to strengthen innovation, ideation, and solution development.",
   },
   {
     date: "October 3",
-    title: "InnoX: Semi-Finals",
-    desc: "Welcome to the InnoX arena, where the sharpest young minds unite to pitch their initial concepts and vie for a spot in the finals.",
+    title: "InnoX (Semi-Finals)",
+    desc: "Selected teams pitch their ideas to a panel of judges for the opportunity to advance to the Grand Finals.",
   },
   {
     date: "October 13",
     title: "Online Workshop Series 2",
-    desc: "Welcome to the advanced mentoring phase, offering elite coaching sessions on October 13th, 18th, and 25th to polish your prototype and public speaking skills.",
+    desc: "Advanced workshops focused on refining prototypes, presentations, and pitching skills ahead of the finals.",
   },
   {
     date: "November 11",
     title: "Grand Finals",
-    desc: "Welcome to the grandest stage of all, where our national finalists pitch live to claim the ultimate title of Sri Lanka's top junior innovators.",
+    desc: "The nation's top finalists present their innovations on the national stage and compete for the championship title.",
     isGF: true,
   },
 ];

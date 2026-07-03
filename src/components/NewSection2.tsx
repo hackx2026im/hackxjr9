@@ -186,12 +186,16 @@ export default function NewSection2() {
 
             <motion.div {...fade(0.15)} className="space-y-6 text-[1.05rem] md:text-[1.15rem] text-white/55 font-light leading-relaxed relative z-30 text-center md:text-left">
               <p>
-                hackX Jr. is Sri Lanka&apos;s premier school-level startup and innovation challenge, organized by the Industrial
+                hackX Jr. 9.0 is Sri Lanka&apos;s premier inter-school innovation competition, organized by the Industrial
                 Management Science Students&apos; Association (IMSSA) at the Department of Industrial Management,
                 University of Kelaniya.
               </p>
               <p>
-                Now in its 9th edition, hackX Jr. has established itself as Sri Lanka&apos;s premier school-level startup and innovation challenge, inspiring young innovators across the nation. The competition empowers school students to identify real-world problems and transform them into functional prototypes and scalable solutions long before they enter university. Through expert mentorship, foundational business training, and a prestigious Grand Finals stage, hackX Jr. continues to nurture the next generation of entrepreneurs, innovators, and technology leaders.
+                hackX Jr. provides a platform for school students to work in teams and transform real-world problems into
+                innovative solutions. Whether it is a prototype, product, service, or technology-driven concept,
+                participants receive guidance, mentorship, and hands-on learning opportunities throughout the competition
+                to develop their creativity, strengthen their problem-solving skills, and bring their ideas to life while
+                fostering an entrepreneurial mindset from an early stage.
               </p>
             </motion.div>
 

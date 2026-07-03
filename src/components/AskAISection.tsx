@@ -292,8 +292,8 @@ export default function AskAISection() {
                   <div key={index} className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
                     <div
                       className={`max-w-[85%] px-5 py-4 rounded-2xl ${isUser
-                          ? "rounded-tr-none bg-white/10 backdrop-blur-md text-white border border-white/5"
-                          : "rounded-tl-none bg-[#18A0C0]/10 backdrop-blur-md border border-[#72E5F8]/20 text-white/90 shadow-[0_0_20px_rgba(24,160,192,0.15)]"
+                        ? "rounded-tr-none bg-white/10 backdrop-blur-md text-white border border-white/5"
+                        : "rounded-tl-none bg-[#18A0C0]/10 backdrop-blur-md border border-[#72E5F8]/20 text-white/90 shadow-[0_0_20px_rgba(24,160,192,0.15)]"
                         } text-sm font-light leading-relaxed`}
                     >
                       {formatMessageText(msg.text)}
