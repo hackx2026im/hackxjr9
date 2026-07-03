@@ -133,7 +133,7 @@ export default function Footer() {
             <Link href="/" className="w-fit">
               <div className="relative" style={{ width: "130px", height: "40px" }}>
                 <Image
-                  src="/hackxlogo.webp"
+                  src="/hackX Jr 9.0 logo.webp"
                   alt="hackX Jr. Logo"
                   fill
                   sizes="130px"

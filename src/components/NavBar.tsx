@@ -101,7 +101,7 @@ export default function NavBar() {
           <Link href="/" className="flex items-center group relative z-50">
             <div className="relative w-[100px] sm:w-[120px] h-[32px] sm:h-[36px]">
               <Image
-                src="/hackxlogo.webp"
+                src="/hackX Jr 9.0 logo.webp"
                 alt="hackX Jr. Logo"
                 fill
                 sizes="(max-width: 640px) 100px, 120px"

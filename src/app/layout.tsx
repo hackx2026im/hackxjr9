@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/hackxlogo.webp",
+        url: "/hackX Jr 9.0 logo.webp",
         alt: "hackX Jr.9.0",
       },
     ],
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
-    images: ["/hackxlogo.webp"],
+    images: ["/hackX Jr 9.0 logo.webp"],
   },
 };
 
