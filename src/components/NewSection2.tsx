@@ -200,10 +200,15 @@ export default function NewSection2() {
             </motion.div>
 
             <motion.div {...fade(0.25)} className="relative z-30 flex justify-center md:justify-start">
-              <button className="btn-primary group">
+              <a
+                href="/hackX-Jr. 9.0-Delegate-Booklet.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary group"
+              >
                 Delegate Booklet
                 <AnimatedDownloadIcon size={17} />
-              </button>
+              </a>
             </motion.div>
           </div>
 
