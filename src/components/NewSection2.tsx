@@ -105,6 +105,12 @@ export default function NewSection2() {
       onMouseMove={handleMouseMove}
       className="relative w-full bg-[#010E13] pt-12 md:pt-28 pb-0 overflow-hidden z-10"
     >
+      {/* Seamless top blend to hide clipped blobs */}
+      <div
+        className="absolute top-0 left-0 right-0 h-32 pointer-events-none z-40"
+        style={{ background: "linear-gradient(to bottom, #010E13 0%, transparent 100%)" }}
+      />
+
       {/* Ambient blobs - Optimized without CSS blur */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
@@ -128,7 +134,7 @@ export default function NewSection2() {
         {/* Top Left (Cylinder) */}
         <motion.div
           style={{ y: y1, rotate: rotate1 }}
-          className="absolute lg:left-[52%] lg:top-[-6%] w-[180px] lg:w-[200px] xl:w-[280px] opacity-100"
+          className="absolute lg:left-[48%] lg:top-[-6%] w-[180px] lg:w-[200px] xl:w-[280px] opacity-100"
         >
           <motion.img
             src="/section 2/Top left.webp"
