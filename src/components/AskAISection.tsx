@@ -193,7 +193,7 @@ export default function AskAISection() {
       } else if (lowerText.includes("fee") || lowerText.includes("cost") || lowerText.includes("free") || lowerText.includes("pay")) {
         fallbackReply = "hackX Jr. 9.0 is **completely free** to enter! There are no registration fees or hidden prerequisites.";
       } else if (lowerText.includes("date") || lowerText.includes("timeline") || lowerText.includes("deadline") || lowerText.includes("when")) {
-        fallbackReply = "Here is the key timeline for **hackX Jr. 9.0**:\n\n• **July 3**: Registrations Open\n• **July 31**: Awareness Session\n• **August 1**: Proposal Submission\n• **August 26**: Online Workshop Series 1\n• **October 3**: InnoX (Semi-Finals)\n• **October 13**: Online Workshop Series 2\n• **November 11**: Grand Finals";
+        fallbackReply = "Here is the key timeline for **hackX Jr. 9.0**:\n\n• **July 4**: Registrations Open\n• **July 31**: Awareness Session\n• **August 1**: Proposal Submission\n• **August 26**: Online Workshop Series 1\n• **October 3**: InnoX (Semi-Finals)\n• **October 13**: Online Workshop Series 2\n• **November 11**: Grand Finals";
       } else if (lowerText.includes("register") || lowerText.includes("sign up") || lowerText.includes("apply")) {
         fallbackReply = "You can register for hackX Jr. 9.0 by clicking any of the **Register Now** buttons on this website. Registration and participation are completely free.";
       } else if (lowerText.includes("criteria") || lowerText.includes("compete") || lowerText.includes("eligible")) {

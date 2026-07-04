@@ -141,7 +141,7 @@ const BRAND2 = "#18A0C0";
 
 const STAGES = [
   {
-    date: "July 3",
+    date: "July 4",
     title: "Registrations Open",
     desc: "Registration begins for schools and young innovators to embark on their journey in Sri Lanka's premier inter-school innovation competition.",
   },
