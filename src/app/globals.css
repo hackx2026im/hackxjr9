@@ -556,6 +556,70 @@
   display: none;                  /* Chrome/Safari */
 }
 
+/* ── Site pre-loader ── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #010E13;
+  background-image: radial-gradient(ellipse 150% 100% at 50% 130%, #052E3F 0%, #010E13 60%);
+  transition: opacity 500ms ease;
+  opacity: 1;
+}
+.preloader--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.preloader__logo-wrap {
+  position: relative;
+  width: clamp(150px, 26vw, 260px);
+}
+.preloader__logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Soft light band that sweeps left-to-right and back across the logo,
+   masked to the logo's own silhouette so it only glows over its pixels. */
+.preloader__sheen {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  -webkit-mask-image: url('/hackX Jr 9.0 logo.webp');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url('/hackX Jr 9.0 logo.webp');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+.preloader__sheen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(114,229,248,0.9), rgba(255,255,255,0.85), rgba(114,229,248,0.9), transparent);
+  animation: preloader-sweep 2.4s ease-in-out infinite;
+}
+@keyframes preloader-sweep {
+  0%   { left: -60%; }
+  50%  { left: 105%; }
+  100% { left: -60%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preloader__sheen::before {
+    animation: none;
+  }
+}
+
 /* Premium custom scrollbar styling */
 .custom-scrollbar {
   scrollbar-width: thin;
