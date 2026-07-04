@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const MIN_DISPLAY_MS = 5000;
+const MIN_DISPLAY_MS = 1000;
 const FADE_MS = 500;
 
 export default function Preloader() {
