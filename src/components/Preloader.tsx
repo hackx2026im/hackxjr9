@@ -34,7 +34,7 @@ export default function Preloader() {
     <div className={`preloader ${fadeOut ? "preloader--hidden" : ""}`} aria-hidden="true">
       <div className="preloader__logo-wrap">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/hackX Jr 9.0 logo.webp" alt="" className="preloader__logo" />
+        <img src="/hackX%20Jr%209.0%20logo.webp" alt="" className="preloader__logo" />
         <div className="preloader__sheen" />
       </div>
     </div>

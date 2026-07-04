@@ -590,11 +590,11 @@
   overflow: hidden;
   mix-blend-mode: screen;
   pointer-events: none;
-  -webkit-mask-image: url('/hackX Jr 9.0 logo.webp');
+  -webkit-mask-image: url('/hackX%20Jr%209.0%20logo.webp');
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
-  mask-image: url('/hackX Jr 9.0 logo.webp');
+  mask-image: url('/hackX%20Jr%209.0%20logo.webp');
   mask-size: contain;
   mask-repeat: no-repeat;
   mask-position: center;
