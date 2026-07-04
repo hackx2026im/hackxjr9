@@ -58,6 +58,7 @@ export const metadata: Metadata = {
 };
 
 import SmoothScroll from "@/components/SmoothScroll";
+import Preloader from "@/components/Preloader";
 
 export default function RootLayout({
   children,
@@ -67,6 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased bg-brand-black text-white">
+        <Preloader />
         <Script id="microsoft-clarity" strategy="afterInteractive">
           {`
             (function(c,l,a,r,i,t,y){

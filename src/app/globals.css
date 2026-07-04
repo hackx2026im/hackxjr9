@@ -559,6 +559,71 @@
   display: none;                  /* Chrome/Safari */
 }
 
+/* ── Site pre-loader ── */
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #010E13;
+  background-image: radial-gradient(ellipse 150% 100% at 50% 130%, #052E3F 0%, #010E13 60%);
+  transition: opacity 500ms ease;
+  opacity: 1;
+}
+.preloader--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.preloader__logo-wrap {
+  position: relative;
+  width: clamp(150px, 26vw, 260px);
+}
+.preloader__logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* Soft light band that sweeps left-to-right and back across the logo.
+   The sheen is a second copy of the logo <img> turned solid white via
+   `filter` (its own alpha keeps the silhouette), then a moving CSS
+   *gradient* mask reveals only a band of it at a time. Gradients are
+   used as the mask source (not the raster .webp) because mobile Safari
+   / Chrome can fail to render a raster image as a mask source — when
+   that happens the masked layer is hidden entirely, so the sweep
+   silently disappears on phones even though it works on desktop. */
+.preloader__sheen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  filter: brightness(0) invert(1);
+  mix-blend-mode: screen;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 40%, rgba(255,255,255,0.95) 50%, transparent 60%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 40%, rgba(255,255,255,0.95) 50%, transparent 60%, transparent 100%);
+  -webkit-mask-size: 320% 100%;
+  mask-size: 320% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: -140% 0;
+  mask-position: -140% 0;
+  animation: preloader-sweep 3.6s ease-in-out infinite;
+}
+@keyframes preloader-sweep {
+  0%   { -webkit-mask-position: -140% 0; mask-position: -140% 0; }
+  50%  { -webkit-mask-position: 140% 0; mask-position: 140% 0; }
+  100% { -webkit-mask-position: -140% 0; mask-position: -140% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preloader__sheen {
+    animation: none;
+    opacity: 0;
+  }
+}
+
 /* Premium custom scrollbar styling */
 .custom-scrollbar {
   scrollbar-width: thin;
