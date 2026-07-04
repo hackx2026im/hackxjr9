@@ -90,12 +90,15 @@ const timelineImages = [
 // canvas (zIndex 2 — behind the ground images, mountain and nodes) to fill the
 // empty sky between the mountain and the final reveal. No hard edges: a radial
 // mask feathers every side and the images are heavily dimmed/blurred.
+// `focusX` is the horizontal object-position (%) used to re-centre the cover-cropped
+// image on the people in frame, since the crop window is much narrower than these
+// landscape photos and a plain 50% center cuts subjects off on some of them.
 const timelineBgs = [
-  "/timeline-bgs/Registrations%20awareness%20session.webp",
-  "/timeline-bgs/Product%20Demo.webp",
-  "/timeline-bgs/Workshops.webp",
-  "/timeline-bgs/Semi%20Finals.webp",
-  "/timeline-bgs/Finals.webp",
+  { src: "/timeline-bgs/Registrations%20awareness%20session.webp", focusX: 40 },
+  { src: "/timeline-bgs/Product%20Demo.webp", focusX: 60 },
+  { src: "/timeline-bgs/Workshops.webp", focusX: 45 },
+  { src: "/timeline-bgs/Semi%20Finals.webp", focusX: 48 },
+  { src: "/timeline-bgs/Finals.webp", focusX: 50 },
 ];
 const BG_CX_DESKTOP = [90, 138, 185, 233, 280]; // world-vw centres spread across the 7-stage span
 const BG_CX_MOBILE = [160, 268, 375, 483, 590];
@@ -103,9 +106,9 @@ const BG_CX_MOBILE = [160, 268, 375, 483, 590];
 function TimelineBackdrops({ cx, width = 42 }: { cx: number[]; width?: number }) {
   return (
     <>
-      {timelineBgs.map((src, i) => (
+      {timelineBgs.map((bg, i) => (
         <div
-          key={src}
+          key={bg.src}
           className="absolute pointer-events-none"
           style={{
             left: `${cx[i] - width / 2}vw`,
@@ -120,12 +123,13 @@ function TimelineBackdrops({ cx, width = 42 }: { cx: number[]; width?: number })
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={src}
+            src={bg.src}
             alt=""
             style={{
               width: "100%",
               height: "100%",
               objectFit: "cover",
+              objectPosition: `${bg.focusX}% center`,
               filter: "grayscale(0.35) brightness(0.62) contrast(1.02) blur(2px)",
               display: "block",
             }}
