@@ -238,7 +238,7 @@ export default function NewSection2() {
               </motion.div>
               
               {/* Brick: Bottom Center Card's Bottom Center */}
-              <motion.div style={{ y: y3, rotate: rotate3 }} className="absolute -bottom-[60px] left-[50%] -translate-x-1/2 w-[180px] md:w-[220px]">
+              <motion.div style={{ y: y3, rotate: rotate3 }} className="absolute -bottom-[90px] left-[50%] -translate-x-1/2 w-[180px] md:w-[220px]">
                 <motion.img src="/section 2/Bottom Center.webp" style={{ x: mx3, y: my3 }} className="w-full h-auto drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]" />
               </motion.div>
             </div>
