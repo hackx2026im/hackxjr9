@@ -201,7 +201,7 @@ export default function AskAISection() {
       } else if (lowerText.includes("workshop") || lowerText.includes("mentor") || lowerText.includes("series")) {
         fallbackReply = "hackX Jr. features two **Online Workshop Series** (open to all), offering foundational training and advanced mentoring to help you build and refine your innovation.";
       } else if (lowerText.includes("contact") || lowerText.includes("coordinators") || lowerText.includes("email") || lowerText.includes("phone")) {
-        fallbackReply = "For official queries, you can reach out directly:\n\n• **Harshana Praveen** (Chief Coordinator): harshana.hackjr@gmail.com | +94 77 208 6681\n• **Lawindi Tharunya** (Chief Coordinator): lawindi.hackjr@gmail.com | +94 71 543 5636\n• **Osanda Senevirathna** (Media Coordinator): osanda.hackjr@gmail.com | +94 77 220 3475";
+        fallbackReply = "For official queries, you can reach out directly:\n\n• **Harshana Praveen** (Chief Coordinator): harshana.hackjr@gmail.com | +94 77 208 6681\n• **Lawindi Tharunya** (Chief Coordinator): lawindi.hackjr@gmail.com | +94 71 543 5636\n• **Osanda Senevirathna** (Media Coordinator): osanda.hackjr@gmail.com";
       }
 
       setTimeout(() => {
