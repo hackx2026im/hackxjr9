@@ -11,8 +11,9 @@ export default function Preloader() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const start = Date.now();
-
+    // Fixed-duration brand moment: independent of network/device speed so it's
+    // identical on every connection, rather than gated on window "load" (which
+    // waits for every image on the page and varies wildly by network).
     const interval = setInterval(() => {
       setProgress(p => {
         if (p >= 100) {
@@ -23,25 +24,15 @@ export default function Preloader() {
       });
     }, 50);
 
-    const finish = () => {
-      const wait = Math.max(MIN_DISPLAY_MS - (Date.now() - start), 0);
-      setTimeout(() => {
-        setFadeOut(true);
-        setTimeout(() => setVisible(false), FADE_MS);
-      }, wait);
+    const dismiss = setTimeout(() => {
+      setFadeOut(true);
+      setTimeout(() => setVisible(false), FADE_MS);
+    }, MIN_DISPLAY_MS);
+
+    return () => {
+      clearInterval(interval);
+      clearTimeout(dismiss);
     };
-
-    if (document.readyState === "complete") {
-      finish();
-    } else {
-      window.addEventListener("load", finish);
-      return () => {
-        window.removeEventListener("load", finish);
-        clearInterval(interval);
-      };
-    }
-
-    return () => clearInterval(interval);
   }, []);
 
   if (!visible) return null;
