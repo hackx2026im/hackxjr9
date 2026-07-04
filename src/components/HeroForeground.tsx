@@ -24,10 +24,10 @@ export default function HeroForeground({ scrollProgress }: HeroForegroundProps) 
     >
       {/* Entry: fade in + zoom OUT (1.08 → 1.0) for cinematic reveal */}
       <motion.div
-        initial={{ opacity: 0, scale: 1.08 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, scale: 1.08, x: "-50%" }}
+        animate={{ opacity: 1, scale: 1, x: "-50%" }}
         transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[140vw] md:w-full"
+        className="absolute inset-y-0 left-1/2 w-[140vw] md:w-full"
         style={{
           transformOrigin: "center center",
         }}

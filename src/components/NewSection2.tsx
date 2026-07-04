@@ -105,6 +105,12 @@ export default function NewSection2() {
       onMouseMove={handleMouseMove}
       className="relative w-full bg-[#010E13] pt-12 md:pt-28 pb-0 overflow-hidden z-10"
     >
+      {/* Seamless top blend to hide clipped blobs */}
+      <div
+        className="absolute top-0 left-0 right-0 h-32 pointer-events-none z-40"
+        style={{ background: "linear-gradient(to bottom, #010E13 0%, transparent 100%)" }}
+      />
+
       {/* Ambient blobs - Optimized without CSS blur */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
@@ -123,12 +129,12 @@ export default function NewSection2() {
 
 
 
-      {/* Floating 3D Artifact Images — Fully Responsive */}
-      <div className="absolute inset-0 max-w-7xl mx-auto pointer-events-none z-[60]">
+      {/* Floating 3D Artifact Images — Desktop Only (Free floating) */}
+      <div className="absolute inset-0 max-w-7xl mx-auto pointer-events-none z-[60] hidden lg:block">
         {/* Top Left (Cylinder) */}
         <motion.div
           style={{ y: y1, rotate: rotate1 }}
-          className="absolute md:hidden lg:block top-[60%] left-[-10%] md:left-[5%] lg:left-[42%] lg:top-[-6%] w-[160px] md:w-[220px] lg:w-[250px] xl:w-[350px] opacity-100"
+          className="absolute lg:left-[48%] lg:top-[-6%] w-[180px] lg:w-[200px] xl:w-[280px] opacity-100"
         >
           <motion.img
             src="/section 2/Top left.webp"
@@ -141,7 +147,7 @@ export default function NewSection2() {
         {/* Top Right (Pillar) */}
         <motion.div
           style={{ y: y2, rotate: rotate2 }}
-          className="absolute md:hidden lg:block top-[38%] right-[2%] md:right-[5%] lg:top-[-4%] lg:-right-[2%] xl:-right-[5%] w-[150px] md:w-[200px] lg:w-[220px] xl:w-[320px] opacity-90"
+          className="absolute lg:top-[-4%] lg:right-[2%] xl:right-[5%] w-[150px] lg:w-[180px] xl:w-[250px] opacity-90"
         >
           <motion.img
             src="/section 2/Top Right.webp"
@@ -154,7 +160,7 @@ export default function NewSection2() {
         {/* Bottom Center (Brick) */}
         <motion.div
           style={{ y: y3, rotate: rotate3 }}
-          className="absolute md:hidden lg:block top-[75%] left-[50%] -translate-x-1/2 lg:top-[22%] lg:left-[60%] lg:translate-x-0 w-[180px] md:w-[250px] lg:w-[280px] xl:w-[400px] opacity-90"
+          className="absolute lg:top-[22%] lg:left-[60%] lg:translate-x-0 w-[200px] lg:w-[220px] xl:w-[320px] opacity-90"
         >
           <motion.img
             src="/section 2/Bottom Center.webp"
@@ -178,13 +184,18 @@ export default function NewSection2() {
             <div className="flex flex-col space-y-3 md:space-y-4">
               <motion.h2
                 {...fade(0.05)}
-                className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.05] text-center md:text-left uppercase"
+                className="text-4xl md:text-5xl lg:text-6xl font-extrabold title-gradient tracking-tight leading-[1.05] text-center md:text-left whitespace-nowrap"
               >
-                What is hackX Jr?
+                WHAT IS hackX Jr.
               </motion.h2>
             </div>
 
-            <motion.div {...fade(0.15)} className="space-y-6 text-[1.05rem] md:text-[1.15rem] text-white/55 font-light leading-relaxed relative z-30 text-center md:text-left">
+            <motion.div 
+              {...fade(0.15)} 
+              lang="en"
+              className="space-y-6 text-[1.05rem] md:text-[1.15rem] text-white/55 font-light leading-relaxed relative z-30 text-justify hyphens-auto"
+              style={{ textJustify: "inter-word" }}
+            >
               <p>
                 hackX Jr. 9.0 is Sri Lanka&apos;s premier inter-school innovation competition, organized by the Industrial
                 Management Science Students&apos; Association (IMSSA) at the Department of Industrial Management,
@@ -200,15 +211,37 @@ export default function NewSection2() {
             </motion.div>
 
             <motion.div {...fade(0.25)} className="relative z-30 flex justify-center md:justify-start">
-              <button className="btn-primary group">
+              <a
+                href="/hackX-Jr. 9.0-Delegate-Booklet.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary group"
+              >
                 Delegate Booklet
                 <AnimatedDownloadIcon size={17} />
-              </button>
+              </a>
             </motion.div>
           </div>
 
           {/* RIGHT — Bento Stats Grid */}
           <div className="lg:col-span-6 grid grid-cols-2 gap-5 relative z-30">
+            {/* ── MOBILE ARTIFACTS (Anchored to the grid) ── */}
+            <div className="absolute inset-0 pointer-events-none z-[60] lg:hidden">
+              {/* Cylinder: Top Left Card's Top Left */}
+              <motion.div style={{ y: y1, rotate: rotate1 }} className="absolute -top-[30px] -left-[20px] w-[150px] md:w-[180px]">
+                <motion.img src="/section 2/Top left.webp" style={{ x: mx1, y: my1 }} className="w-full h-auto drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]" />
+              </motion.div>
+              
+              {/* Pillar: Top Right Card's Top Right */}
+              <motion.div style={{ y: y2, rotate: rotate2 }} className="absolute -top-[30px] -right-[15px] w-[130px] md:w-[150px]">
+                <motion.img src="/section 2/Top Right.webp" style={{ x: mx2, y: my2 }} className="w-full h-auto drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]" />
+              </motion.div>
+              
+              {/* Brick: Bottom Center Card's Bottom Center */}
+              <motion.div style={{ y: y3, rotate: rotate3 }} className="absolute -bottom-[120px] left-[50%] -translate-x-1/2 w-[180px] md:w-[220px]">
+                <motion.img src="/section 2/Bottom Center.webp" style={{ x: mx3, y: my3 }} className="w-full h-auto drop-shadow-[0_20px_30px_rgba(0,0,0,0.5)]" />
+              </motion.div>
+            </div>
             {/* Stat: 9 Editions */}
             <StatCard className="col-span-1 min-h-[200px]" delay={0.1}>
               <div className="text-3xl md:text-4xl font-extrabold text-white mb-2 tracking-tight">9</div>

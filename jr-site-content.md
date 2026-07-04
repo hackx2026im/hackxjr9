@@ -240,67 +240,57 @@ Member 2
 Name: Lawindi Tharunya  
 Role: Chief Coordinator  
 Email: lawindi.hackjr@gmail.com  
-Phone: \+94 71 543 5636
+Phone: +94 71 543 5636
 
 Member 3  
 Name: Osanda Senevirathna  
 Role: Media Coordinator  
-Email: osanda.hackjr@gmail.com  
-Phone: \+94 77 220 3475
+Email: osanda.hackjr@gmail.com
 
 Member 4  
 Name: Kaveendya Jayalath  
 Role: Secretary  
-Email: kaveendya.hackjr@gmail.com  
-Phone: \+94 76 991 0659
+Email: kaveendya.hackjr@gmail.com
 
 Member 5  
 Name: Thaveesha Weerasinghe  
 Role: Financial Coordinator  
-Email: thaveesha.hackjr@gmail.com  
-Phone: \+94 76 609 8316
+Email: thaveesha.hackjr@gmail.com
 
 Member 6  
 Name: Hashmi Nethmindi  
 Role: Financial Coordinator  
-Email: hashmi.hackjr@gmail.com  
-Phone: \+94 70 513 5811
+Email: hashmi.hackjr@gmail.com
 
 Member 7  
 Name: Aadila Anees  
 Role: Partnership Coordinator  
-Email: aadila.hackjr@gmail.com  
-Phone: \+94 77 171 9609
+Email: aadila.hackjr@gmail.com
 
 Member 8  
 Name: Hiruni De Joedth  
 Role: Partnership Coordinator  
-Email: hiruni.hackjr@gmail.com  
-Phone: \+94 74 046 0400
+Email: hiruni.hackjr@gmail.com
 
 Member 9  
 Name: Tharushan Dasanayake  
 Role: Marketing Coordinator  
-Email: tharushan.hackjr@gmail.com  
-Phone: \+94 70 423 6606
+Email: tharushan.hackjr@gmail.com
 
 Member 10  
 Name: Wasana Senarath  
 Role: Marketing Coordinator  
-Email: wasana.hackjr@gmail.com  
-Phone: \+94 76 116 8312
+Email: wasana.hackjr@gmail.com
 
 Member 11  
 Name: Araliya Paranawithana  
 Role: Session Coordinator  
-Email: araliya.hackjr@gmail.com  
-Phone: \+94 77 512 3845
+Email: araliya.hackjr@gmail.com
 
 Member 12  
 Name: Pasindu Maduranga  
 Role: Session Coordinator  
-Email: pasindu.hackjr@gmail.com  
-Phone: \+94 766003262
+Email: pasindu.hackjr@gmail.com
 
 FAQ
 

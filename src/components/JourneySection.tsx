@@ -141,7 +141,7 @@ const BRAND2 = "#18A0C0";
 
 const STAGES = [
   {
-    date: "July 3",
+    date: "July 4",
     title: "Registrations Open",
     desc: "Registration begins for schools and young innovators to embark on their journey in Sri Lanka's premier inter-school innovation competition.",
   },
@@ -151,7 +151,7 @@ const STAGES = [
     desc: "An introductory session for students and teachers covering the competition, timeline, and what it takes to succeed.",
   },
   {
-    date: "August 1",
+    date: "Aug 1",
     title: "Proposal Submission",
     desc: "Teams submit their innovative ideas and proposed solutions before the proposal submission deadline.",
   },
@@ -173,6 +173,7 @@ const STAGES = [
   {
     date: "November 11",
     title: "Grand Finals",
+    titleGradient: "linear-gradient(135deg, #D4AF37 0%, #FFF3A0 60%)",
     desc: "The nation's top finalists present their innovations on the national stage and compete for the championship title.",
     isGF: true,
   },
@@ -305,7 +306,7 @@ function DesktopJourneySection() {
               className="absolute w-[100vw] flex flex-col items-center text-center px-10"
               style={{ left: 0, top: "12vh", y: introY, opacity: textOp, zIndex: 10 }}
             >
-              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white uppercase" style={{
+              <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight title-gradient uppercase" style={{
                 lineHeight: 1.1,
               }}>
                 Your Journey
@@ -333,8 +334,8 @@ function DesktopJourneySection() {
                 alt="Mountain"
                 className="w-full h-full object-cover object-top"
                 style={{
-                  WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 80%, transparent 90%)",
-                  maskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 80%, transparent 90%)"
+                  WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%)",
+                  maskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%)"
                 }}
               />
             </div>
@@ -358,7 +359,7 @@ function DesktopJourneySection() {
                 }}
               >
                 {img.num === 3 ? (
-                  <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 22%, black 100%)", maskImage: "linear-gradient(to bottom, transparent 0%, black 22%, black 100%)" }}>
+                  <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)", maskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)" }}>
                     <img
                       src={`/horizontal timeline/${img.num}.webp`}
                       alt={`Ruins ${img.num}`}
@@ -372,8 +373,8 @@ function DesktopJourneySection() {
                     />
                   </div>
                 ) : (
-                  <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 100%)" }}>
-                    <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)" }}>
+                  <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)" }}>
+                    <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)" }}>
                       <img
                         src={`/horizontal timeline/${img.num}.webp`}
                         alt={`Ruins ${img.num}`}
@@ -464,9 +465,14 @@ function DesktopJourneySection() {
                     <div className="font-extrabold tracking-tight text-white" style={{
                       fontSize: isGF ? "clamp(1.5rem, 2vw, 2rem)" : "clamp(1.1rem, 1.4vw, 1.5rem)",
                       lineHeight: 1.15, marginBottom: "0.4rem",
-                      textShadow: isGF
-                        ? `0 0 30px rgba(114,229,248,0.6), 0 4px 20px rgba(0,0,0,0.9)`
-                        : `0 4px 15px rgba(0,0,0,0.9)`,
+                      ...(isGF ? {
+                        background: "linear-gradient(135deg, #D4AF37 0%, #FFF3A0 50%, #AA8825 100%)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        textShadow: "0 4px 20px rgba(0,0,0,0.9)",
+                      } : {
+                        textShadow: `0 4px 15px rgba(0,0,0,0.9)`,
+                      }),
                     }}>
                       {stage.title}
                     </div>
@@ -723,7 +729,7 @@ function MobileJourneySection() {
               className="absolute w-[100vw] flex flex-col items-center text-center px-8"
               style={{ left: 0, top: "12vh", x: introX, y: introY, opacity: textOp, zIndex: 10 }}
             >
-              <h2 className="text-4xl font-extrabold tracking-tight text-white uppercase" style={{ lineHeight: 1.1 }}>
+              <h2 className="text-4xl font-extrabold tracking-tight title-gradient uppercase" style={{ lineHeight: 1.1 }}>
                 Your Journey
               </h2>
               <p className="font-light" style={{
@@ -766,8 +772,8 @@ function MobileJourneySection() {
                 alt="Mountain"
                 className="w-full h-full object-cover object-top"
                 style={{
-                  WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 45%, transparent 55%)",
-                  maskImage: "linear-gradient(to bottom, transparent 0%, black 12%, black 45%, transparent 55%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 65%, transparent 80%)",
+                  maskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 65%, transparent 80%)",
                 }}
               />
             </motion.div>
@@ -785,8 +791,8 @@ function MobileJourneySection() {
                 width: "90vw",
                 zIndex: 3,
               }}>
-                <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 20%, black 100%)" }}>
-                  <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)" }}>
+                <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)" }}>
+                  <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)" }}>
                     <img src="/horizontal timeline/2.webp" alt="Ruins 2"
                       style={{ height: "100%", width: "100%", objectFit: "cover", objectPosition: "center bottom", filter: "brightness(0.7) contrast(1.15)", display: "block" }} />
                   </div>
@@ -804,8 +810,8 @@ function MobileJourneySection() {
               width: "150vw",
               zIndex: 3,
             }}>
-              <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 18%, black 100%)" }}>
-                <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 3%, black 86%, transparent 100%)" }}>
+              <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 5%, black 100%)" }}>
+                <div style={{ width: "100%", height: "100%", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%)" }}>
                   <img src="/horizontal timeline/3.webp" alt="Grand Finals"
                     style={{ height: "100%", width: "100%", objectFit: "cover", objectPosition: "center bottom", filter: "brightness(0.85) contrast(1.15)", display: "block" }} />
                 </div>
@@ -873,9 +879,14 @@ function MobileJourneySection() {
                     <div className="font-extrabold tracking-tight text-white" style={{
                       fontSize: isGF ? "clamp(1rem, 4.5vw, 1.4rem)" : "clamp(0.85rem, 3.8vw, 1.2rem)",
                       lineHeight: 1.15, marginBottom: "0.35rem",
-                      textShadow: isGF
-                        ? "0 0 30px rgba(114,229,248,0.6), 0 4px 20px rgba(0,0,0,0.9)"
-                        : "0 4px 15px rgba(0,0,0,0.9)",
+                      ...(isGF ? {
+                          background: "linear-gradient(135deg, #D4AF37 0%, #FFF3A0 50%, #AA8825 100%)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                          textShadow: "0 4px 20px rgba(0,0,0,0.9)",
+                        } : {
+                          textShadow: "0 4px 15px rgba(0,0,0,0.9)",
+                        }),
                     }}>
                       {stage.title}
                     </div>

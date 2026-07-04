@@ -89,12 +89,8 @@ function formatMessageText(text: string) {
 export default function AskAISection() {
   const [messages, setMessages] = useState<Message[]>([
     {
-      sender: "user",
-      text: "Do we need a working prototype when we register?",
-    },
-    {
       sender: "ai",
-      text: "No. At the registration stage, you only need to submit your idea and the required application details. A working prototype is not mandatory initially, but teams progressing to later stages may be expected to showcase a prototype or proof of concept.",
+      text: "Hello! Welcome to hackX Jr. 9.0. I am your AI assistant. Feel free to ask me anything about the competition, registration details, eligibility, or timelines!",
       showMenu: true,
     },
   ]);
@@ -145,7 +141,16 @@ export default function AskAISection() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(process.env.NEXT_PUBLIC_CHATBOT_API_URL || "http://localhost:5000/api/chat", {
+      let baseUrl = process.env.NEXT_PUBLIC_CHATBOT_API_URL || "http://localhost:8000";
+      if (baseUrl.endsWith("/api/chat")) {
+        baseUrl = baseUrl.slice(0, -9);
+      } else if (baseUrl.endsWith("/api/chat/")) {
+        baseUrl = baseUrl.slice(0, -10);
+      }
+      baseUrl = baseUrl.replace(/\/$/, "");
+      const apiUrl = `${baseUrl}/api/chat/jr`;
+
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -188,7 +193,7 @@ export default function AskAISection() {
       } else if (lowerText.includes("fee") || lowerText.includes("cost") || lowerText.includes("free") || lowerText.includes("pay")) {
         fallbackReply = "hackX Jr. 9.0 is **completely free** to enter! There are no registration fees or hidden prerequisites.";
       } else if (lowerText.includes("date") || lowerText.includes("timeline") || lowerText.includes("deadline") || lowerText.includes("when")) {
-        fallbackReply = "Here is the key timeline for **hackX Jr. 9.0**:\n\n• **July 3**: Registrations Open\n• **July 31**: Awareness Session\n• **August 1**: Proposal Submission\n• **August 26**: Online Workshop Series 1\n• **October 3**: InnoX (Semi-Finals)\n• **October 13**: Online Workshop Series 2\n• **November 11**: Grand Finals";
+        fallbackReply = "Here is the key timeline for **hackX Jr. 9.0**:\n\n• **July 4**: Registrations Open\n• **July 31**: Awareness Session\n• **August 1**: Proposal Submission\n• **August 26**: Online Workshop Series 1\n• **October 3**: InnoX (Semi-Finals)\n• **October 13**: Online Workshop Series 2\n• **November 11**: Grand Finals";
       } else if (lowerText.includes("register") || lowerText.includes("sign up") || lowerText.includes("apply")) {
         fallbackReply = "You can register for hackX Jr. 9.0 by clicking any of the **Register Now** buttons on this website. Registration and participation are completely free.";
       } else if (lowerText.includes("criteria") || lowerText.includes("compete") || lowerText.includes("eligible")) {
@@ -196,7 +201,7 @@ export default function AskAISection() {
       } else if (lowerText.includes("workshop") || lowerText.includes("mentor") || lowerText.includes("series")) {
         fallbackReply = "hackX Jr. features two **Online Workshop Series** (open to all), offering foundational training and advanced mentoring to help you build and refine your innovation.";
       } else if (lowerText.includes("contact") || lowerText.includes("coordinators") || lowerText.includes("email") || lowerText.includes("phone")) {
-        fallbackReply = "For official queries, you can reach out directly:\n\n• **Harshana Praveen** (Chief Coordinator): harshana.hackjr@gmail.com | +94 77 208 6681\n• **Lawindi Tharunya** (Chief Coordinator): lawindi.hackjr@gmail.com | +94 71 543 5636\n• **Osanda Senevirathna** (Media Coordinator): osanda.hackjr@gmail.com | +94 77 220 3475";
+        fallbackReply = "For official queries, you can reach out directly:\n\n• **Harshana Praveen** (Chief Coordinator): harshana.hackjr@gmail.com | +94 77 208 6681\n• **Lawindi Tharunya** (Chief Coordinator): lawindi.hackjr@gmail.com | +94 71 543 5636\n• **Osanda Senevirathna** (Media Coordinator): osanda.hackjr@gmail.com";
       }
 
       setTimeout(() => {
@@ -249,7 +254,7 @@ export default function AskAISection() {
           className="text-center mb-10 md:mb-12"
         >
 
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6 tracking-tight uppercase">ASK AI ANYTHING</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold title-gradient mb-6 tracking-tight uppercase">ASK AI ANYTHING</h2>
           <p className="text-lg text-white/60 font-light max-w-2xl mx-auto text-center">
             Chat with our AI Assistant to get instant answers about hackX Jr. 9.0
           </p>
